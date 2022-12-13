@@ -1,5 +1,7 @@
 import styles from "../dist/output.css";
 import "./globals.css";
+import "./header";
+import Header from "./header";
 
 export default function RootLayout({ children }) {
   return (
@@ -10,9 +12,7 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
-        <header className="bg-amber-400 p-5 sticky top-0">
-          <h1 className="text-2xl md:text-4xl">Header</h1>
-        </header>
+        <Header />
 
         <div className="bg-white my-5 w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
           <aside className="bg-green-300 md:w-1/3 lg:w-1/4 px-5 py-40">
