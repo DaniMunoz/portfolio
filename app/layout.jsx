@@ -10,22 +10,22 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
-        <header class="bg-amber-400 p-5">
-          <h1 class="text-2xl md:text-4xl">Header</h1>
+        <header className="bg-amber-400 p-5 sticky top-0">
+          <h1 className="text-2xl md:text-4xl">Header</h1>
         </header>
 
-        <div class="bg-white my-5 w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-          <aside class="bg-green-300 md:w-1/3 lg:w-1/4 px-5 py-40">
-            <h1 class="text-2xl md:text-4xl">Sidebar</h1>
+        <div className="bg-white my-5 w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+          <aside className="bg-green-300 md:w-1/3 lg:w-1/4 px-5 py-40">
+            <h1 className="text-2xl md:text-4xl">Sidebar</h1>
           </aside>
-          <main class="bg-sky-300 md:w-2/3 lg:w-3/4 px-5 py-40">
-            <h1 class="text-2xl md:text-4xl">Main Content</h1>
+          <main className="bg-sky-300 md:w-2/3 lg:w-3/4 px-5 py-40">
+            <h1 className="text-2xl md:text-4xl">Main Content</h1>
             {children}
           </main>
         </div>
 
-        <footer class="bg-slate-800 mt-auto p-5">
-          <h1 class="text-2xl md:text-4xl text-white">Footer</h1>
+        <footer className="bg-slate-800 mt-auto p-5">
+          <h1 className="text-2xl md:text-4xl text-white">Footer</h1>
         </footer>
       </body>
     </html>
