@@ -15,8 +15,6 @@ For now, it uses:
 
 The data and images, at this moment, are local
 
-/*
 ```bash
 npx create-next-app --example with-jest with-jest-app
 ```
-*/
