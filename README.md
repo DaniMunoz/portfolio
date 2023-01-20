@@ -10,8 +10,9 @@ I am willing to add more to the list :)
 
 For now, it uses:
 
-- React, [NextJS](https://nextjs.org/)
-- Test Driven Development: React Testing library, Jest, Cypress
+- [React](https://reactjs.org/), [NextJS](https://nextjs.org/)
+- Test Driven Development: [React Testing library](https://testing-library.com/), [Jest](https://jestjs.io/), [Cypress](https://www.cypress.io/)
+- [Tailwindcss](https://tailwindcss.com/)
 
 The data and images, at this moment, are local
 
