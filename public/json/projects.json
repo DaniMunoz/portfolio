@@ -1,0 +1,92 @@
+[{
+    "id": 1,
+    "project": "Project Management and Costs Control",
+    "image": "/images/ptec3-1.jpg",
+    "customer": "PTec",
+    "customer_web": "http://www.ptec.es/",
+    "technologies": "SQL Server, .NET, <a href=\"http://www.dbnetgrid.com/dbnetgrid/default.aspx\" target=\"_blank\">dbnetgrid</a>, Javascript",
+    "text_en": "This software summarized all company projects revenues and costs, for Project Managers to easily track the flaws and benefits.<br><br>Every single bill was submitted to the system, and staff registered the working hours they spent in every project, every day.&nbsp;Hourly costs were calculated for everyone.<br><br>This way you could see how the company was going at any time!<br><br>It contained a Document Repository for offers, bills and receptions, with automatic pdf generation and mailing between Commercial, Purchasing and Administration departments.",
+    "text_es": ""
+  }, {
+    "id": 2,
+    "project": "Health Training Portal",
+    "image": "/images/iavante2.jpg",
+    "customer": "Iavante",
+    "customer_web": "http://www.iavante.es/",
+    "technologies": "SQL Server, .NET, <a href=\"http://www.dbnetgrid.com/dbnetgrid/default.aspx\" target=\"_blank\">dbnetgrid</a>, Javascript",
+    "text_en": "This is a competence-based training portal for health emergency professionals (medics, nurses, ambulance drivers...). They gain competences as they pass exams, and those competences are used to opt to a higher position within their public company.",
+    "text_es": ""
+  }, {
+    "id": 3,
+    "project": "Information System Maintenance",
+    "image": "/images/epes.jpg",
+    "customer": "EPES",
+    "customer_web": "http://www.epes.es/",
+    "technologies": "SQL Server, ASP.NET, Visual Basic, <a href=\"http://www.dbnetgrid.com/dbnetgrid/default.aspx\" target=\"_blank\">DBNetGrid</a>, Javascript, <a href=\"http://www.meta4.co.uk/\" target=\"_blank\">Meta4</a>",
+    "text_en": "Software issues solving through a Ticketing System. Corrective, adaptive and evolutionary software maintenance. User support, analysis, implementation and monitoring.",
+    "text_es": ""  
+  }, {
+    "id": 4,
+    "project": "CMAT 3D",
+    "image": "/images/cmat.jpg",
+    "customer": "Iavante",
+    "customer_web": "https://www.iavante.es/en#cmat",
+    "technologies": "AUTOCAD, 3D Studio, <a href=\"https://www.swift3d.com/\" target=\"_blank\">Swift 3D</a>, Flash MX",
+    "text_en": "CMAT is an Intelligent Building used for training healthcare personnel, simulating real scenarios through DaVinci robotic surgical system, simulators and others. The buildings lighting, air-conditioning, doors, security cameras, alarms and others are managed using an intuitive software. We developed a 3D User Interface which represents the building and its different areas. The user selects a floor and an area to access to specific controls for the domotics items installed there. You can see </span><font color=\"#ff6600\"><b>and touch</b></font> one of the prototypes <a href=\"http://berylo.com/berylo/Curriculum/CMAT3D.swf\" target=\"_blank\"><b><font color=\"#008000\">HERE</font></b></a>&nbsp;. Click or touch any area of the building! (Flash is needed)",
+    "text_es": ""  
+  }, {
+    "id": 5,
+    "project": "Hospital Website",
+    "image": "/images/hupm3.jpg",
+    "customer": "Hospital Puerta del Mar",
+    "customer_web": "https://hospitalpuertadelmar.com/",
+    "technologies": "PHP, <a href=\"http://en.wikipedia.org/wiki/Smarty\" target=\"_blank\">Smarty</a>, PostgreSQL",
+    "text_en": "New website for this hospital at Cadiz, Spain. I was the technical responsible in a 4 people team.",
+    "text_es": ""  
+  }, {
+    "id": 6,
+    "project": "Budget Control",
+    "image": "/images/epes-1.jpg",
+    "customer": "EPES",
+    "customer_web": "http://www.epes.es",
+    "technologies": "SQL Server, .NET, <a href=\"http://www.dbnetgrid.com/dbnetgrid/default.aspx\" target=\"_blank\">DBNetGrid</a>, Javascript",
+    "text_en": "Slot allocation for Healthcare personnel, service coverage management, hiring needs, data extraction for payroll calculations, analysis for decision making... They had a system based in <a href=\"http://www.meta4.co.uk/\" target=\"_blank\">Meta4</a> software, which calculated payrolls based in daily staff dedication to different projects. We made a new system based in the hourly staff dedication. This solved roundings from the previous system, which usually provoked overcosts and multiple claimings from workers. This application saved a lot of money annually to the customer, so we were complimented on several occasions. I began as programmer and promoted to Analyst and technical manager of the project a year later.",
+    "text_es": ""  
+  }, {
+    "id": 7,
+    "project": "Aloha College Intranet",
+    "image": "/images/aloha_logo2.jpg",
+    "customer": "Aloha College Foundation",
+    "customer_web": "http://www.aloha-college.com",
+    "technologies": "SQL Server, .NET, <a href=\"http://www.dbnetgrid.com/dbnetgrid/default.aspx\" target=\"_blank\">DBNetGrid</a>, Javascript, <a href=\"http://www.capita-sims.co.uk/\" target=\"_blank\">SIMS</a>",
+    "text_en": "More than five years developing the college Intranet from scratch, to ease Administration tasks.&nbsp;More than 40 different applications, most of them using database information from SIMS (School Information Management System, from <a href=\"http://www.capita-sims.co.uk/\" target=\"_blank\">Capita</a>), obtained through database server linking.<br><br>- Pupils Reports Repository<br>- Loan of educational books<br>- Teaching Staff Evaluation<br>- Ticketing system for IT, Administration and Maintenance Departments<br>- Pupils absences notifications to parents via email<br>- Uniform shop POS<br>- Summer School Management: Activities, fees, charging up...<br>- Staff personal Ads<br>- Inventory control using barcoded labels<br>- Facilities bookings<br>... and many more!",
+    "text_es": ""
+  }, {
+    "id": 8,
+    "project": "3warnings App",
+    "image": "/images/.jpg",
+    "customer": "-",
+    "customer_web": "http://www.3warnings.com/",
+    "technologies": "Android, Java, Google Cloud Platform, Datastore, MemCache",
+    "text_en": "",
+    "text_es": ""
+  }, {
+    "id": 9,
+    "project": "3warnings Ads",
+    "image": "/images/.jpg",
+    "customer": "-",
+    "customer_web": "https://3warnings.com/ads/profile.jsp",
+    "technologies": "",
+    "text_en": "",
+    "text_es": ""
+  }, {
+    "id": 10,
+    "project": "Portfolio",
+    "image": "/images/.jpg",
+    "customer": "-",
+    "customer_web": "http://www./",
+    "technologies": "React, NextJS",
+    "text_en": "",
+    "text_es": ""
+  }
+  , {}]
