@@ -1,0 +1,14 @@
+[
+  {
+    "en": {
+      "header.projects": "Projects",
+      "header.qualifications": "Qualifications",
+      "header.contact": "Contact"
+    },
+    "es": {
+        "header.projects": "Proyectos",
+        "header.qualifications": "Cualificaciones",
+        "header.contact": "Contacto"
+      }
+  }
+]
