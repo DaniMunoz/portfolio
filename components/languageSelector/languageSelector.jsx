@@ -12,9 +12,9 @@ const LanguageSelector = () => {
 
   return (
     <div>
-      <select value={language} onChange={handleLanguageChange}>
-        <option value="en">English</option>
-        <option value="es">Español</option>
+      <select role="languageSelector" data-testid="select-language" value={language} onChange={handleLanguageChange}>
+        <option data-testid="en" key="en" value="en">English</option>
+        <option data-testid="es" key="es" value="es">Español</option>
       </select>
     </div>
   );
