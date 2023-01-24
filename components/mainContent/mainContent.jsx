@@ -1,7 +1,7 @@
 import Link from "next/link";
 //import styles from "../dist/output.css";
-import ProjectList from '../projectList/projectList';
-import projectsData from '../../public/json/projects.json';
+import ProjectList from "../projectList/projectList";
+import projectsData from "../../public/json/projects.json";
 
 export default function MainContent() {
   return (
@@ -9,7 +9,7 @@ export default function MainContent() {
       <h1 className="text-2xl md:text-4xl">Main Content</h1>
       <div>
         <ProjectList projects={projectsData} />
-    </div>
+      </div>
     </main>
   );
 }

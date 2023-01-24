@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {languageActions} from '../../src/store/language-slice';
 
 const LanguageSelector = () => {
-  const [language, setLanguage] = useState('en');
+  const dispatch = useDispatch();
+  //To retrieve state:
+  const language = useSelector((state) => state.language.language);
 
   const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
+    dispatch(languageActions.changeLanguageTo(event.target.value))
   };
 
   return (
