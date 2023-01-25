@@ -1,11 +1,13 @@
 import { render, fireEvent } from '@testing-library/react';
 import { screen } from '@testing-library/react';
 import MainContent from './mainContent';
+import { Provider } from "react-redux";
+import store from "../../src/store/store";
 
 describe('MainContent', () => {
   it('renders the correct text in the Main Content', () => {
     //const { getByText } = render(<Header />);
-    render(<MainContent />);
+    render(<Provider store={store}><MainContent /></Provider>);
     expect(screen.getByText('Main Content')).toBeInTheDocument();
   });
 

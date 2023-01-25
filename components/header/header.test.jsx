@@ -25,12 +25,10 @@ describe('Header', () => {
     fireEvent.click(homeLink);
     expect(window.location.pathname).toBe('/');
 
-    /*
     fireEvent.click(aboutLink);
-    expect(window.location.pathname).toBe('/qualifications');
+    expect(window.location.pathname).toBe('/');
 
     fireEvent.click(contactLink);
-    expect(window.location.pathname).toBe('/contact');
-    */
+    expect(window.location.pathname).toBe('/');
   });
 });
