@@ -3,12 +3,16 @@
     "en": {
       "header.projects": "Projects",
       "header.qualifications": "Qualifications",
-      "header.contact": "Contact"
+      "header.contact": "Contact",
+      "mainContent.title.projects": "Projects",
+      "mainContent.title.qualifications": "Qualifications"
     },
     "es": {
         "header.projects": "Proyectos",
         "header.qualifications": "Cualificaciones",
-        "header.contact": "Contacto"
+        "header.contact": "Contacto",
+        "mainContent.title.projects": "Proyectos",
+        "mainContent.title.qualifications": "Cualificaciones"
       }
   }
 ]
