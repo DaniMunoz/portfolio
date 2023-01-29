@@ -7,7 +7,7 @@ import styles from './qualificationsList.module.css'
 const QualificationsList = ({ qualifications }) => {   
   const language = useSelector((state) => state.language.language);
   const cards = qualifications.map((qualification) => (
-    <div key={qualification.id} className='max-w-sm rounded overflow-hidden shadow-lg m-4'>
+    <div key={qualification.id}  role="qualificationCard" className='max-w-sm rounded overflow-hidden shadow-lg m-4'>
       <img className='w-full h-64 object-cover rounded-t' src={qualification.image} alt={qualification.title_en} />
       <div className="px-6 py-4">
         { (language == "en") && <h2 className="font-medium text-lg mb-2">{qualification.title_en}</h2>}

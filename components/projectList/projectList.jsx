@@ -8,7 +8,7 @@ const ProjectList = ({ projects }) => {
   const language = useSelector((state) => state.language.language);
 
   const cards = projects.map((project) => (
-    <div key={project.id} className='max-w-sm rounded overflow-hidden shadow-lg m-4'>
+    <div key={project.id} role="projectCard" className='max-w-sm rounded overflow-hidden shadow-lg m-4'>
       <img className='w-full h-64 object-cover rounded-t' src={project.image} alt={project.project} />
       <div className="px-6 py-4">
         { (language == "en") && <h2 className="font-medium text-lg mb-2">{project.project_en}</h2>}

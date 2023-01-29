@@ -1,5 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import { Provider, useSelector } from "react-redux";
+import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
 import MainContent from "./mainContent";
 import store from "../../src/store/store";
 
