@@ -3,6 +3,8 @@ import Link from "next/link";
 //import styles from "../dist/output.css";
 import ProjectList from "../projectList/projectList";
 import projectsData from "../../public/json/projects.json";
+import QualificationsList from "../qualificationsList/qualificationsList";
+import qualificationsData from "../../public/json/qualifications.json";
 import languageData from '../../public/json/languages.json' assert { type: 'JSON' };
 
 export default function MainContent() {
@@ -20,6 +22,7 @@ export default function MainContent() {
       </h1>
       <div className="flex flex-wrap justify-center">
         { showProjects && <ProjectList projects={projectsData} />}
+        { !showProjects && <QualificationsList qualifications={qualificationsData} />}
       </div>
     </article>
   );

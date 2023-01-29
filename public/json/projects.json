@@ -1,24 +1,27 @@
 [{
     "id": 1,
-    "project": "Project Management and Costs Control",
+    "project_en": "Project Management and Costs Control",
+    "project_es": "Gestión de Proyectos y Costes",
     "image": "/images/ptec3-1.jpg",
     "customer": "PTec",
     "customer_web": "http://www.ptec.es/",
     "technologies": "SQL Server, .NET, <a href=\"http://www.dbnetlink.net/dbnetsuite\" target=\"_blank\">DBNetSuite</a>, Javascript",
-    "text_en": "This software summarized all company projects revenues and costs, for Project Managers to easily track the flaws and benefits.<br><br>Every single bill was submitted to the system, and staff registered the working hours they spent in every project, every day.&nbsp;Hourly costs were calculated for everyone.<br><br>This way you could see how the company was going at any time!<br><br>It contained a Document Repository for offers, bills and receptions, with automatic pdf generation and mailing between Commercial, Purchasing and Administration departments.",
-    "text_es": ""
+    "text_en": "This software summarizes all company projects revenues and costs, to easily track them. <br /><br />Every single bill is submitted to the system, and staff register the working hours they spend in every project, every day.&nbsp;Hourly costs are calculated for everyone.<br><br>This way you can see how the company is performing at any time!<br><br>It contains a Document Repository for offers, bills and receptions, with automatic pdf generation and mailing between Commercial, Purchasing and Administration departments.",
+    "text_es": "Este software resume todos los ingresos y costes de los proyectos de la empresa. <br /><br />Se registra cada factura, y el personal imputa las horas de trabajo que dedica a cada proyecto, diariamente. Los costes por hora se calculaban para todos. Así se puede ver en todo momento cómo vaa la empresa. Contiene un repositorio de documentos para ofertas, facturas y recepciones, con generación automática de pdf y envío entre los departamentos Comercial, Compras y Administración."
   }, {
     "id": 2,
-    "project": "Health Training Portal",
+    "project_en": "Competency-Based Training and Assessment for Healthcare Professionals",
+    "project_es": "Formación y Evaluación por Competencias para Profesionales Sanitarios",
     "image": "/images/iavante2.jpg",
     "customer": "Iavante",
     "customer_web": "http://www.iavante.es/",
     "technologies": "SQL Server, .NET, <a href=\"http://www.dbnetlink.net/dbnetsuite\" target=\"_blank\">DBNetSuite</a>, Javascript",
     "text_en": "This is a competence-based training portal for health emergency professionals (medics, nurses, ambulance drivers...). They gain competences as they pass exams, and those competences are used to opt to a higher position within their public company.",
-    "text_es": ""
+    "text_es": "Se trata de un portal de formación por competencias para profesionales de emergencias sanitarias (médicos, enfermeros, conductores de ambulancias...). Adquieren competencias a medida que superan exámenes, y esas competencias les sirven para optar a un puesto más alto dentro de su empresa pública"
   }, {
     "id": 3,
-    "project": "Information System Maintenance",
+    "project_en": "Information System Maintenance",
+    "project_es": "Mantenimiento de Sistema de Información",
     "image": "/images/epes.jpg",
     "customer": "EPES",
     "customer_web": "http://www.epes.es/",
@@ -27,7 +30,8 @@
     "text_es": ""  
   }, {
     "id": 4,
-    "project": "CMAT 3D",
+    "project_en": "CMAT 3D",
+    "project_es": "CMAT 3D",
     "image": "/images/cmat.jpg",
     "customer": "Iavante",
     "customer_web": "https://www.iavante.es/en#cmat",
@@ -36,7 +40,8 @@
     "text_es": ""  
   }, {
     "id": 5,
-    "project": "Hospital Website",
+    "project_en": "Hospital Website",
+    "project_es": "Web de Hospital",
     "image": "/images/hupm3.jpg",
     "customer": "Hospital Puerta del Mar",
     "customer_web": "https://hospitalpuertadelmar.com/",
@@ -45,7 +50,8 @@
     "text_es": ""  
   }, {
     "id": 6,
-    "project": "Budget Control",
+    "project_en": "Healthcare Personnel Shift and Payroll Management",
+    "project_es": "Gestión de Turnos y Nóminas de Personal Sanitario",
     "image": "/images/epes-1.jpg",
     "customer": "EPES",
     "customer_web": "http://www.epes.es",
@@ -54,7 +60,8 @@
     "text_es": ""  
   }, {
     "id": 7,
-    "project": "Aloha College Intranet",
+    "project_en": "International School Intranet",
+    "project_es": "Intranet de Colegio Internacional",
     "image": "/images/aloha_logo2.jpg",
     "customer": "Aloha College Foundation",
     "customer_web": "http://www.aloha-college.com",
@@ -63,7 +70,8 @@
     "text_es": ""
   }, {
     "id": 8,
-    "project": "3warnings App",
+    "project_en": "3warnings App",
+    "project_es": "3warnings: App",
     "image": "/images/.jpg",
     "customer": "-",
     "customer_web": "http://www.3warnings.com/",
@@ -72,7 +80,8 @@
     "text_es": ""
   }, {
     "id": 9,
-    "project": "3warnings Ads",
+    "project_en": "3warnings Ads Platform",
+    "project_es": "3warnings: Platforma de anuncios",
     "image": "/images/.jpg",
     "customer": "-",
     "customer_web": "https://3warnings.com/ads/profile.jsp",
@@ -81,7 +90,8 @@
     "text_es": ""
   }, {
     "id": 10,
-    "project": "Portfolio",
+    "project_en": "Personal Portfolio",
+    "project_es": "Portafolio Personal",
     "image": "/images/.jpg",
     "customer": "-",
     "customer_web": "http://www./",
