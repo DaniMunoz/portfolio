@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-amber-400 p-5 sticky top-0 flex flex-row">
+    <header className="bg-amber-400 p-5 sticky top-0 flex flex-row z-10">
       <Link className="basis-1/4" href="/">
         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
       </Link>

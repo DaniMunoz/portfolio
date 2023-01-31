@@ -15,7 +15,7 @@ export default function MainContent() {
   const languageStrings = languageData[0][language];
 
   return (
-    <article className="bg-sky-300 md:w-2/3 lg:w-3/4 px-5 min-h-[85vh] text-center">
+    <article className="bg-sky-300 md:w-2/3 lg:w-4/5 px-5 min-h-[85vh] text-center scroll-auto">
       <h1 className="text-2xl md:text-4xl p-10">
         { showProjects && languageStrings["mainContent.title.projects"]}
         { !showProjects && languageStrings["mainContent.title.qualifications"]}
