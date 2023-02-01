@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "degree",
-    "image": "/images/ptec3-1.jpg",
+    "image": "/images/uah-128.png",
     "link": "<a href=\"https://www.uah.es/\" target=\"_blank\">Universidad de Alcalá</a>",
     "institution_en": "UAH - Alcalá University (Spain)",
     "institution_es": "UAH - Universidad de Alcalá",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "type": "degree",
-    "image": "/images/ptec3-1.jpg",
+    "image": "/images/uma-128.png",
     "link": "<a href=\"https://www.uma.es/\" target=\"_blank\">Universidad de Málaga</a>",
     "institution_en": "UMA - Málaga University (Spain)",
     "institution_es": "UMA - Universidad de Málaga",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "type": "certification",
-    "image": "/images/ptec3-1.jpg",
+    "image": "/images/stanford-128.png",
     "link": "https://www.coursera.org/account/accomplishments/verify/UKPST6XZNNGM?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
     "institution_en": "Stanford University",
     "institution_es": "Universidad de Stanford",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "type": "certification",
-    "image": "/images/ptec3-1.jpg",
+    "image": "/images/deeplearning-128.png",
     "link": "https://www.coursera.org/account/accomplishments/specialization/6PRFUNZTS7HE",
     "institution_en": "DeepLearning.AI",
     "institution_es": "DeepLearning.AI",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "type": "certification",
-    "image": "/images/ptec3-1.jpg",
+    "image": "/images/google-cloud-128.png",
     "link": "https://www.coursera.org/account/accomplishments/specialization/CS7DX6HYLX9X",
     "institution_en": "Google Cloud Platform",
     "institution_es": "Google Cloud Platform",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "type": "certification",
-    "image": "/images/ptec3-1.jpg",
+    "image": "/images/microsoft-128.png",
     "link": "https://mcp.microsoft.com/Anonymous//Transcript/Validate",
     "institution_en": "Microsoft",
     "institution_es": "Microsoft",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "type": "certification",
-    "image": "/images/ptec3-1.jpg",
+    "image": "/images/microsoft-128.png",
     "link": "https://mcp.microsoft.com/Anonymous//Transcript/Validate",
     "institution_en": "Microsoft",
     "institution_es": "Microsoft",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "type": "certification",
-    "image": "/images/ptec3-1.jpg",
+    "image": "/images/mongodb-128.png",
     "link": "https://learn.mongodb.com/c/cuXBsBhFTo-CJoqI-At-hQ",
     "institution_en": "MongoDB",
     "institution_es": "MongoDB",
