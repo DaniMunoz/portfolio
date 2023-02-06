@@ -11,7 +11,7 @@ describe('Header', () => {
     //const { getByText } = render(<Header />);
     render(<Provider store={store}><Header /></Provider>);
     expect(screen.getByText('Projects')).toBeInTheDocument();
-    expect(screen.getByText('Degrees & Certifications')).toBeInTheDocument();
+    expect(screen.getByText('Education')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
   });
 
@@ -19,7 +19,7 @@ describe('Header', () => {
     //const { getByText } = render(<Header />);
     render(<Provider store={store}><Header /></Provider>);
     const homeLink = screen.getByText('Projects');
-    const aboutLink = screen.getByText('Degrees & Certifications');
+    const aboutLink = screen.getByText('Education');
     const contactLink = screen.getByText('Contact');
 
     fireEvent.click(homeLink);

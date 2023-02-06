@@ -2,14 +2,14 @@
   {
     "en": {
       "header.projects": "Projects",
-      "header.qualifications": "Degrees & Certifications",
+      "header.qualifications": "Education",
       "header.contact": "Contact",
       "mainContent.title.projects": "Projects",
       "mainContent.title.qualifications": "Degrees & Certifications"
     },
     "es": {
         "header.projects": "Proyectos",
-        "header.qualifications": "Títulos y Certificaciones",
+        "header.qualifications": "Educación",
         "header.contact": "Contacto",
         "mainContent.title.projects": "Proyectos",
         "mainContent.title.qualifications": "Títulos y Certificaciones"

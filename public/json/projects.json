@@ -7,7 +7,7 @@
     "customer_web": "http://www.ptec.es/",
     "summary_en": "summary",
     "summary_es": "resumen",
-    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "Javascript"}],
+    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "JS"}],
     "text_en": "This software summarizes all company projects revenues and costs, to easily track them. <br /><br />Every single bill is submitted to the system, and staff register the working hours they spend in every project, every day.&nbsp;Hourly costs are calculated for everyone.<br><br>This way you can see how the company is performing at any time!<br><br>It contains a Document Repository for offers, bills and receptions, with automatic pdf generation and mailing between Commercial, Purchasing and Administration departments.",
     "text_es": "Este software resume todos los ingresos y costes de los proyectos de la empresa. <br /><br />Se registra cada factura, y el personal imputa las horas de trabajo que dedica a cada proyecto, diariamente. Los costes por hora se calculaban para todos. Así se puede ver en todo momento cómo vaa la empresa. Contiene un repositorio de documentos para ofertas, facturas y recepciones, con generación automática de pdf y envío entre los departamentos Comercial, Compras y Administración."
   }, {
@@ -17,7 +17,7 @@
     "image": "/images/iavante_225.png",
     "customer": "Iavante",
     "customer_web": "http://www.iavante.es/",
-    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "Javascript"}],
+    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "JS"}],
     "text_en": "This is a competence-based training portal for health emergency professionals (medics, nurses, ambulance drivers...). They gain competences as they pass exams, and those competences are used to opt to a higher position within their public company.",
     "text_es": "Se trata de un portal de formación por competencias para profesionales de emergencias sanitarias (médicos, enfermeros, conductores de ambulancias...). Adquieren competencias a medida que superan exámenes, y esas competencias les sirven para optar a un puesto más alto dentro de su empresa pública"
   }, {
@@ -27,7 +27,7 @@
     "image": "/images/epes_max640.jpg",
     "customer": "EPES",
     "customer_web": "http://www.epes.es/",
-    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "Javascript"}, {"tech": "Meta4"}],
+    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "JS"}, {"tech": "Meta4"}],
     "text_en": "Software issues solving through a Ticketing System. Corrective, adaptive and evolutionary software maintenance. User support, analysis, implementation and monitoring.",
     "text_es": ""  
   }, {
@@ -57,7 +57,7 @@
     "image": "/images/epes-1_max640.jpg",
     "customer": "EPES",
     "customer_web": "http://www.epes.es",
-    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "Javascript"}],
+    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "JS"}],
     "text_en": "Slot allocation for Healthcare personnel, service coverage management, hiring needs, data extraction for payroll calculations, analysis for decision making... They had a system based in <a href=\"http://www.meta4.co.uk/\" target=\"_blank\">Meta4</a> software, which calculated payrolls based in daily staff dedication to different projects. We made a new system based in the hourly staff dedication. This solved roundings from the previous system, which usually provoked overcosts and multiple claimings from workers. This application saved a lot of money annually to the customer, so we were complimented on several occasions. I began as programmer and promoted to Analyst and technical manager of the project a year later.",
     "text_es": ""  
   }, {
@@ -67,7 +67,7 @@
     "image": "/images/aloha_logo2_max640.jpg",
     "customer": "Aloha College Foundation",
     "customer_web": "http://www.aloha-college.com",
-    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "Javascript"}, { "tech": "SIMS"}],
+    "technologies": [ { "tech": "SQL_Server"}, { "tech": ".NET"}, { "tech": "DBNetSuite"}, { "tech": "JS"}, { "tech": "SIMS"}],
     "text_en": "More than five years developing the college Intranet from scratch, to ease Administration tasks.&nbsp;More than 40 different applications, most of them using database information from SIMS (School Information Management System, from <a href=\"http://www.capita-sims.co.uk/\" target=\"_blank\">Capita</a>), obtained through database server linking.<br><br>- Pupils Reports Repository<br>- Loan of educational books<br>- Teaching Staff Evaluation<br>- Ticketing system for IT, Administration and Maintenance Departments<br>- Pupils absences notifications to parents via email<br>- Uniform shop POS<br>- Summer School Management: Activities, fees, charging up...<br>- Staff personal Ads<br>- Inventory control using barcoded labels<br>- Facilities bookings<br>... and many more!",
     "text_es": ""
   }, {

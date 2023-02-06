@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-800 mt-auto p-5">
+    <footer className="border-0 p-5">
         <h1 className="text-2xl md:text-4xl text-white">Footer</h1>
     </footer>
   );

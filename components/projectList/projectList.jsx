@@ -42,19 +42,21 @@ const ProjectList = ({ projects }) => {
 {/** */}
 
   const cards = projects.map((project) => (    
-    <a key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg border border-gray-100 p-0 max-w-sm m-4">
+    <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg border border-gray-100 p-0 max-w-sm m-4">
       <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
 
       <div className="justify-between sm:flex">
+        <div className="ml-0 hidden flex-shrink-0 sm:block">
+          <Image alt={project.project_en} className="h-24 w-24 rounded-tl-lg object-cover shadow-sm" height={64} width={128} src={project.image}/>
+        </div>
+
         <div>
           { (language == "en") && <h3 className="p-2 text-lg font-bold text-gray-900">{project.project_en}</h3>}
           { (language == "es") && <h3 className="p-2 text-lg font-bold text-gray-900">{project.project_es}</h3>}
           <a href={project.customer_web} className="mt-1 text-xs font-medium text-gray-600" target="_blank" rel="noreferrer">{project.customer}</a>
         </div>
 
-        <div className="ml-3 hidden flex-shrink-0 sm:block">
-          <Image alt={project.project_en} className="h-16 w-32 rounded-lg object-cover shadow-sm" height={64} width={128} src={project.image}/>
-        </div>
+        
       </div>
 
       <div className="mt-4 sm:pr-8 p-4">
@@ -63,11 +65,11 @@ const ProjectList = ({ projects }) => {
         {
           project.technologies.map((tech) => {
             return (
-            <span key={tech.tech} class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{tech.tech}</span>
+            <span key={tech.tech} className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{tech.tech}</span>
           )})
         }        
       </div>
-    </a>
+    </div>
   ))
 
   return (cards);

@@ -12,6 +12,7 @@ import MainContent from "../components/mainContent/mainContent";
 export default function Home() {
   return (
     <>
+      <div className="font-sans bg-gradient-to-br from-rose-100 via-slate-300 to-teal-100">
       <Provider store={store}>
       <Head>
         <title>Daniel&apos;s Portfolio</title>
@@ -29,6 +30,7 @@ export default function Home() {
 
       <Footer />
       </Provider>
+      </div>
     </>
   );
 }
