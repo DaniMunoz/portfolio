@@ -4,15 +4,15 @@
       "header.projects": "Projects",
       "header.qualifications": "Education",
       "header.contact": "Contact",
-      "mainContent.title.projects": "Projects",
-      "mainContent.title.qualifications": "Degrees & Certifications"
+      "mainContent.title.projects": "PROJECTS",
+      "mainContent.title.qualifications": "DEGREES & CERTIFICATIONS"
     },
     "es": {
         "header.projects": "Proyectos",
         "header.qualifications": "Educación",
         "header.contact": "Contacto",
-        "mainContent.title.projects": "Proyectos",
-        "mainContent.title.qualifications": "Títulos y Certificaciones"
+        "mainContent.title.projects": "PROYECTOS",
+        "mainContent.title.qualifications": "TÍTULOS Y CERTIFICACIONES"
       }
   }
 ]

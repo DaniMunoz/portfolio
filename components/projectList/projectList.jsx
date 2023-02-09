@@ -2,72 +2,84 @@ import { useSelector } from 'react-redux';
 import React from 'react';
 import Image from "next/image";
 //import { css } from '@emotion/core';
-import styles from './projectList.module.css'
+//import styles from './projectList.module.css'
 
 const ProjectList = ({ projects }) => {
   const language = useSelector((state) => state.language.language);
 
-  {/*
-    <div key={project.id} role="projectCard" className='max-w-xs rounded overflow-hidden shadow-lg m-4'>
-      <Image className='object-cover relative w-full h-48 rounded-md overflow-hidden' src={project.image} alt={project.project_en} width={267} height={138}/>
-      <div className="px-6 py-4">
-        { (language == "en") && <h2 className="font-medium text-lg mb-2">{project.project_en}</h2>}
-        { (language == "es") && <h2 className="font-medium text-lg mb-2">{project.project_es}</h2>}
-        <p className="text-gray-700 text-base">{project.customer}</p>
-        <p className={styles.container + " text-gray-700 text-base"} dangerouslySetInnerHTML={{__html: project.technologies}}></p>
-      </div>
-      <div className="px-6 py-4">
-        { (language == "en") &&<a href={project.customer_web} className="underline text-blue-500" target="_blank" rel="noreferrer">Visit website</a>}
-        { (language == "es") &&<a href={project.customer_web} className="underline text-blue-500" target="_blank" rel="noreferrer">Visitar Web</a>}
-      </div>
-    </div>
- */}
-
- {/*
-    
-*/}
-
-{/*
-    <div key={project.id} role="projectCard" className="rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 shadow-xl max-w-xs overflow-hidden m-4">
-      <a className="block rounded-xl bg-white p-6 sm:p-8" href="">
-        <div className="mt-16 sm:pr-8">
-          { (language == "en") && <h3 className="text-xl font-bold text-gray-900">{project.project_en}</h3>}
-          { (language == "es") && <h3 className="text-xl font-bold text-gray-900">{project.project_es}</h3>}
-          <p className={styles.container + " mt-2 text-sm text-gray-500"} dangerouslySetInnerHTML={{__html: project.technologies}}></p>
-        </div>
-      </a>
-    </div>
-*/}
-
-{/** */}
-
   const cards = projects.map((project) => (    
-    <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg border border-gray-100 p-0 max-w-sm m-4">
+    <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96">
       <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
 
-      <div className="justify-between sm:flex">
-        <div className="ml-0 hidden flex-shrink-0 sm:block">
-          <Image alt={project.project_en} className="h-24 w-24 rounded-tl-lg object-cover shadow-sm" height={64} width={128} src={project.image}/>
+      <div className="justify-between flex">
+        <div className="ml-0 flex-shrink-0 block">
+          <Image alt={project.project_en} className="h-24 w-24 rounded-tl-lg object-cover" height={96} width={96} src={project.image}/>
         </div>
 
-        <div>
-          { (language == "en") && <h3 className="p-2 text-lg font-bold text-gray-900">{project.project_en}</h3>}
-          { (language == "es") && <h3 className="p-2 text-lg font-bold text-gray-900">{project.project_es}</h3>}
-          <a href={project.customer_web} className="mt-1 text-xs font-medium text-gray-600" target="_blank" rel="noreferrer">{project.customer}</a>
+        <div className='bg-slate-200 w-full text-left'>
+          { (language == "en") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_en}</h3>}
+          { (language == "es") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_es}</h3>}
+          <a href={project.customer_web} className="p-2 text-sm font-medium text-slate-400" target="_blank" rel="noreferrer">{project.customer}</a>
         </div>
 
         
       </div>
 
-      <div className="mt-4 sm:pr-8 p-4">
-        { (language == "en") && <p className="text-base text-gray-900">{project.summary_en}</p>}
-        { (language == "es") && <p className="text-base text-gray-900">{project.summary_es}</p>}
+      <div className="sm:pr-8 p-3 text-justify text-sm">
+        { (language == "en") && <p className="text-gray-900 p-2" dangerouslySetInnerHTML={{__html: project.summary_en}}></p>}
+        { (language == "es") && <p className="text-gray-900 p-2" dangerouslySetInnerHTML={{__html: project.summary_es}}></p>}
+        <div className="p-2 mt-2">
         {
-          project.technologies.map((tech) => {
-            return (
-            <span key={tech.tech} className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">{tech.tech}</span>
-          )})
-        }        
+          project.technologies.map((tech) => {            
+              switch (tech.tech) {
+                case ".NET":
+                  return <span key={tech.tech} className="bg-blue-400 text-blue-100 dark:bg-blue-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Android":
+                  return <span key={tech.tech} className="bg-green-500 text-green-100 dark:bg-green-500 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "AutoCAD":
+                  return <span key={tech.tech} className="bg-rose-400 text-rose-100 dark:bg-rose-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Blender":
+                  return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Bootstrap":
+                  return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "DBNetSuite":
+                  return <span key={tech.tech} className="bg-slate-400 text-slate-100 dark:bg-slate-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Flash_MX":
+                  return <span key={tech.tech} className="bg-indigo-400 text-indigo-100 dark:bg-indigo-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Google_Cloud":
+                  return <span key={tech.tech} className="bg-orange-400 text-orange-100 dark:bg-orange-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "IBM_Watson":
+                  return <span key={tech.tech} className="bg-pink-400 text-pink-100 dark:bg-pink-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Java":
+                  return <span key={tech.tech} className="bg-red-400 text-red-100 dark:bg-red-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "JS":
+                  return <span key={tech.tech} className="bg-yellow-400 text-yellow-100 dark:bg-yellow-400 dark:text-black text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Meta4":
+                  return <span key={tech.tech} className="bg-sky-400 text-sky-100 dark:bg-sky-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "MongoDB":
+                  return <span key={tech.tech} className="bg-lime-400 text-lime-100 dark:bg-lime-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "NextJS":
+                  return <span key={tech.tech} className="bg-pink-400 text-pink-100 dark:bg-pink-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "NodeJS":
+                  return <span key={tech.tech} className="bg-green-400 text-green-100 dark:bg-green-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "PHP":
+                  return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "PostgreSQL":
+                  return <span key={tech.tech} className="bg-sky-400 text-sky-100 dark:bg-sky-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "React":
+                  return <span key={tech.tech} className="bg-purple-400 text-purple-100 dark:bg-purple-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Smarty":
+                  return <span key={tech.tech} className="bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-black text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "SQL_Server":
+                  return <span key={tech.tech} className="bg-teal-400 text-teal-100 dark:bg-teal-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                case "Swift3D":
+                  return <span key={tech.tech} className="bg-gray-400 text-gray-100 dark:bg-gray-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                default:
+                  return <span key={tech.tech} className="bg-blue-400 text-blue-100 dark:bg-blue-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+              }
+            })
+        } 
+        </div>       
       </div>
     </div>
   ))
