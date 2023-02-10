@@ -2,19 +2,19 @@ import { Provider } from 'react-redux';
 import store from '../src/store/store';
 import Head from "next/head";
 import Header from "@/components/header/header";
-import Footer from "../components/footer/footer";
+//import Footer from "../components/footer/footer";
 import SideBar from "../components/sidebar/sidebar";
 import MainContent from "../components/mainContent/mainContent";
-
-//import styles from "../dist/output.css";
-//import styles from "@/pages/index.module.css";
-//bg-gradient-to-br from-rose-100 via-slate-300 to-teal-100
-//<div className="bg-[url('/images/background.svg')]"></div>
+//import helpers from './helpers.js';
 
 export default function Home() {
+  //const randomGradient1 = helpers.staticGradient();
+  const randomGradient1 = "from-rose-100 via-slate-300 to-teal-100";
+  //const randomGradient2 = helpers.staticGradient();
+  //<Footer />
   return (
     <>
-      <div className="bg-gradient-to-br from-rose-100 via-slate-300 to-teal-100 font-sans">
+      <div className={"font-sans bg-gradient-to-br " + randomGradient1} >
         <Provider store={store}>
         <Head>
           <title>Daniel&apos;s Portfolio</title>
@@ -27,10 +27,9 @@ export default function Home() {
 
         <div className="w-full flex flex-col space-y-4 md:flex-row md:space-x-0 md:space-y-0">
           <SideBar />
-          <MainContent />
+          <MainContent gradient={randomGradient1}/>
         </div>
-
-        <Footer />
+        
         </Provider>
       </div>
     </>

@@ -1,15 +1,19 @@
 import { useSelector } from 'react-redux';
 import React from 'react';
 import Image from "next/image";
-//import { css } from '@emotion/core';
-//import styles from './projectList.module.css'
+import helpers from './helpers.js';
 
 const ProjectList = ({ projects }) => {
   const language = useSelector((state) => state.language.language);
 
-  const cards = projects.map((project) => (    
+  let gradientes = [];
+  gradientes = projects.map(() => {
+    return helpers.staticGradient();
+  })
+  
+  const cards = projects.map((project, i) => (
     <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96">
-      <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+      <span id={"gradiente-" + project.id} className={"absolute inset-x-0 bottom-0 h-3 " + gradientes[i]}></span>
 
       <div className="justify-between flex">
         <div className="ml-0 flex-shrink-0 block">
@@ -41,9 +45,9 @@ const ProjectList = ({ projects }) => {
                 case "Blender":
                   return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
                 case "Bootstrap":
-                  return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                  return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2 py-1 rounded-lg ">{tech.tech}</span>;
                 case "DBNetSuite":
-                  return <span key={tech.tech} className="bg-slate-400 text-slate-100 dark:bg-slate-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                  return <span key={tech.tech} className="bg-emerald-400 text-emerald-100 dark:bg-emerald-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
                 case "Flash_MX":
                   return <span key={tech.tech} className="bg-indigo-400 text-indigo-100 dark:bg-indigo-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
                 case "Google_Cloud":
@@ -71,9 +75,9 @@ const ProjectList = ({ projects }) => {
                 case "Smarty":
                   return <span key={tech.tech} className="bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-black text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
                 case "SQL_Server":
-                  return <span key={tech.tech} className="bg-teal-400 text-teal-100 dark:bg-teal-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                  return <span key={tech.tech} className="bg-fuchsia-400 text-fuchsia-100 dark:bg-fuchsia-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
                 case "Swift3D":
-                  return <span key={tech.tech} className="bg-gray-400 text-gray-100 dark:bg-gray-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
+                  return <span key={tech.tech} className="bg-lime-400 text-lime-100 dark:bg-lime-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
                 default:
                   return <span key={tech.tech} className="bg-blue-400 text-blue-100 dark:bg-blue-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-lg ">{tech.tech}</span>;
               }
