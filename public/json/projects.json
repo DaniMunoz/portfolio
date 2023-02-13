@@ -30,7 +30,7 @@
     "customer": "Iavante",
     "customer_web": "http://www.iavante.es/",
     "summary_en": "Courses and Accreditations Management for Healthcare professionals, who take them to gain competencies, required to advance in their careers",
-    "summary_es": "Gestión de cursos y acreditaciones para profesionales sanitarios, para ganar competencias, requeridas para avanzar en sus carreras",
+    "summary_es": "Gestión de cursos y acreditaciones a profesionales sanitarios, con las que ganan competencias, requeridas para avanzar en sus carreras",
     "technologies": [ { "tech": ".NET"}, { "tech": "SQL_Server"}, { "tech": "DBNetSuite"}, { "tech": "JS"}],
     "text_en": "This is a competence-based training portal for health emergency professionals (medics, nurses, ambulance drivers...). They gain competences as they pass exams, and those competences are used to opt to a higher position within their public company.",
     "text_es": "Se trata de un portal de formación por competencias para profesionales de emergencias sanitarias (médicos, enfermeros, conductores de ambulancias...). Adquieren competencias a medida que superan exámenes, y esas competencias les sirven para optar a un puesto más alto dentro de su empresa pública"

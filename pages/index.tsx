@@ -5,10 +5,10 @@ import Header from "@/components/header/header";
 //import Footer from "../components/footer/footer";
 import SideBar from "../components/sidebar/sidebar";
 import MainContent from "../components/mainContent/mainContent";
-//import helpers from './helpers.js';
+import randomGradients from '../src/randomGradient.js';
 
 export default function Home() {
-  //const randomGradient1 = helpers.staticGradient();
+  //const randomGradient1 = randomGradients.staticGradient();
   const randomGradient1 = "from-rose-100 via-slate-300 to-teal-100";
   //const randomGradient2 = helpers.staticGradient();
   //<Footer />

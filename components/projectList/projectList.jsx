@@ -1,19 +1,19 @@
 import { useSelector } from 'react-redux';
 import React from 'react';
 import Image from "next/image";
-import helpers from './helpers.js';
+import randomGradients from '../../src/randomGradient.js';
 
 const ProjectList = ({ projects }) => {
   const language = useSelector((state) => state.language.language);
 
   let gradientes = [];
   gradientes = projects.map(() => {
-    return helpers.staticGradient();
+    return randomGradients.staticGradient();
   })
   
   const cards = projects.map((project, i) => (
     <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96">
-      <span id={"gradiente-" + project.id} className={"absolute inset-x-0 bottom-0 h-3 " + gradientes[i]}></span>
+      <span id={"gradiente-" + project.id} className={"absolute inset-x-0 bottom-0 h-3 bg-gradient-to-r " + gradientes[i]}></span>
 
       <div className="justify-between flex">
         <div className="ml-0 flex-shrink-0 block">

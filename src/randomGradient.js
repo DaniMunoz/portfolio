@@ -18,8 +18,7 @@ const toColors = [//'to-slate-300', 'to-gray-300', 'to-zinc-300', 'to-neutral-30
     , 'to-blue-300', 'to-indigo-300', 'to-violet-300', 'to-purple-300', 'to-fuchsia-300', 'to-pink-300', 'to-rose-100'];
 
 helpers.staticGradient = () => {
-    return "bg-gradient-to-r" 
-        + " " + fromColors[Math.floor(Math.random() * 17)] 
+    return fromColors[Math.floor(Math.random() * 17)] 
         + " " + viaColors[Math.floor(Math.random() * 17)] 
         + " " + toColors[Math.floor(Math.random() * 17)];
 }
