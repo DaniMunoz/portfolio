@@ -11,6 +11,10 @@ const ProjectList = ({ projects }) => {
   gradientes = projects.map(() => {
     return randomGradients.staticGradient();
   })
+
+  /**<div>
+            <Modal btnText='More...' className="flex items-center justify-center"></Modal>
+          </div> */
   
   const cards = projects.map((project, i) => (
     <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96">
@@ -25,8 +29,10 @@ const ProjectList = ({ projects }) => {
           { (language == "en") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_en}</h3>}
           { (language == "es") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_es}</h3>}
           <a href={project.customer_web} className="p-2 text-sm font-medium text-slate-400 absolute bottom-0 left-0" target="_blank" rel="noreferrer">{project.customer}</a>
-          { (language == "en") && <Modal btnText="More" className="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"/>}
-          { (language == "es") && <Modal btnText="Más" className="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"/>}
+          { (language == "en") && <Modal btnText="More" btnClassName="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"
+                                    title={project.project_en} text={project.text_en}/>}
+          { (language == "es") && <Modal btnText="Más" btnClassName="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"
+                                    title={project.project_es} text={project.text_es}/>}
         </div>
         
       </div>

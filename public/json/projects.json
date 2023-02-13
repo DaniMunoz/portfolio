@@ -2,10 +2,10 @@
     "id": 0,
     "project_en": "Personal Portfolio - This web",
     "project_es": "Portafolio Personal - Esta web",
-    "image": "/images/daniel.png",
+    "image": "/images/daniel-round-96.png",
     "customer": "Daniel",
     "customer_web": "http://www.3warnings.com/",
-    "summary_en": "To show my Full Stack Developer experience with different technologies, projects and companies. As well as my academic achievements and certifications",
+    "summary_en": "To show my Full Stack Developer experience with different tech stacks, projects and companies. As well as my Academic achievements and Certifications",
     "summary_es": "Para mostrar mi experiencia Full Stack Developer con distintas tecnologías, proyectos y empresas. Así como mis logros académicos y certificaciones",
     "technologies": [ { "tech": "React"}, { "tech": "NextJS"}, { "tech": "NodeJS"}, { "tech": "MongoDB"}],
     "text_en": "",
@@ -117,5 +117,5 @@
     "summary_es": "Website para crear anuncios y mostrarlos en la app 3warnings. Integración con Paypal, anuncios por países y áreas geográficas, estadísticas, créditos...",
     "technologies": [ { "tech": "Java"}, { "tech": "Google_Cloud"}, { "tech": "JS"}, { "tech": "IBM_Watson"}, { "tech": "Bootstrap"}],
     "text_en": "",
-    "text_es": ""
+    "text_es": "<p class=\"c0 title\" id=\"h.o91iffrornie\"><span class=\"c5\">Test Header</span></p><p class=\"c2\"><span class=\"c1\"></span></p><p class=\"c7\"><span class=\"c1\">Test paragraph</span></p><p class=\"c2\"><span class=\"c1\"></span></p><p class=\"c7\"><span class=\"c1\">Test list:</span></p><ul class=\"c6 lst-kix_9m25zd39fhx5-0 start\"><li class=\"c3 li-bullet-0\"><span class=\"c1\">Item 1</span></li><li class=\"c3 li-bullet-0\"><span class=\"c1\">Item 2</span></li><li class=\"c3 li-bullet-0\"><span class=\"c1\">Item 3</span></li></ul><p class=\"c2\"><span class=\"c1\"></span></p><p class=\"c7\"><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 468.00px;\"><img alt=\"\" src=\"images/image1.jpg\" style=\"width: 624.00px; height: 468.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></p><p class=\"c2\"><span class=\"c1\"></span></p>"
   }]

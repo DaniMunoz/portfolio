@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import {showProjectsActions} from '../../src/store/showProjects-slice';
 import Link from "next/link";
-import Image from "next/image";
+//import Image from "next/image";
 import LanguageSelector from "../languageSelector/languageSelector";
 import languageData from '../../public/json/languages.json' assert { type: 'JSON' };
 
@@ -27,9 +27,12 @@ export default function Header() {
       <nav className="md:text-2xl basis-3/4">
         <div className="flex flex-row-reverse">
           <LanguageSelector />&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-amber-400 hover:bg-amber-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded">{languageStrings["header.contact"]}</Link>&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-teal-400 hover:bg-teal-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded" onClick={handleHideProjects}>{languageStrings["header.qualifications"]}</Link>&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-rose-400 hover:bg-rose-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded" onClick={handleShowProjects}>{languageStrings["header.projects"]}</Link>&nbsp;&nbsp;&nbsp;
+          <Link href="/" className="font-normal bg-amber-400 hover:bg-amber-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded">
+            {languageStrings["header.contact"]}</Link>&nbsp;&nbsp;&nbsp;
+          <Link href="/" className="font-normal bg-teal-400 hover:bg-teal-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded" onClick={handleHideProjects}>
+            {languageStrings["header.qualifications"]}</Link>&nbsp;&nbsp;&nbsp;
+          <Link href="/" className="font-normal bg-rose-400 hover:bg-rose-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded" onClick={handleShowProjects}>
+            {languageStrings["header.projects"]}</Link>&nbsp;&nbsp;&nbsp;
         </div>
       </nav>
     </header>

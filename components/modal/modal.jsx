@@ -1,8 +1,10 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import { useSelector } from 'react-redux';
 
 export default function MyModal(props) {
   let [isOpen, setIsOpen] = useState(false)
+  const language = useSelector((state) => state.language.language);
 
   function closeModal() {
     setIsOpen(false)
@@ -17,7 +19,7 @@ export default function MyModal(props) {
       <button
         type="button"
         onClick={openModal}
-        className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        className={props.btnClassName}
       >
         {props.btnText}
       </button>
@@ -52,13 +54,9 @@ export default function MyModal(props) {
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    Payment successful
+                    {props.title}
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
+                  <div className="mt-2 text-sm text-gray-500" dangerouslySetInnerHTML={{__html: props.text}}>
                   </div>
 
                   <div className="mt-4">
@@ -67,7 +65,7 @@ export default function MyModal(props) {
                       className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
-                      Got it, thanks!
+                      {props.closeBtnText || ((language == 'en') && "Close") || ((language == 'es') && "Cerrar")}
                     </button>
                   </div>
                 </Dialog.Panel>
