@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useSelector } from 'react-redux';
 import styles from './sidebar.module.css';
+import Modal from '../modal/modal';
 
 export default function SideBar() {
   const language = useSelector((state) => state.language.language);
@@ -21,8 +22,9 @@ export default function SideBar() {
             <svg className="w-6 h-6 mb-2 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
             </svg>
-          
-          <p><button className="bg-slate-800 hover:bg-slate-600 text-white px-4 py-1 rounded">More...</button></p>
+          <div>
+            <Modal btnText='More...' className="flex items-center justify-center"></Modal>
+          </div>
         </>
         }
         {(language == "es") &&
@@ -32,8 +34,9 @@ export default function SideBar() {
             <svg className="w-6 h-6 mb-2 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
             </svg>
-          
-          <p><button className="bg-slate-800 hover:bg-slate-600 text-white px-4 py-1 rounded">More...</button></p>
+          <div>
+            <Modal btnText='Más...' className="flex items-center justify-center"></Modal>
+          </div>
         </>
         }
       </section>

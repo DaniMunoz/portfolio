@@ -9,6 +9,7 @@
     "cypress": "cypress open"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.10",
     "@reduxjs/toolkit": "^1.9.1",
     "next": "latest",
     "postcss-flexbugs-fixes": "5.0.2",

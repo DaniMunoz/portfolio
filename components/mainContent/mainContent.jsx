@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import Link from "next/link";
+//import Link from "next/link";
 //import styles from "../dist/output.css";
 import ProjectList from "../projectList/projectList";
 import projectsData from "../../public/json/projects.json";

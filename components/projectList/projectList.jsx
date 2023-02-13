@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import React from 'react';
 import Image from "next/image";
 import randomGradients from '../../src/randomGradient.js';
+import Modal from '../modal/modal';
 
 const ProjectList = ({ projects }) => {
   const language = useSelector((state) => state.language.language);
@@ -24,8 +25,8 @@ const ProjectList = ({ projects }) => {
           { (language == "en") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_en}</h3>}
           { (language == "es") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_es}</h3>}
           <a href={project.customer_web} className="p-2 text-sm font-medium text-slate-400 absolute bottom-0 left-0" target="_blank" rel="noreferrer">{project.customer}</a>
-          { (language == "en") && <button className="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2">More...</button>}
-          { (language == "es") && <button className="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2">Más...</button>}
+          { (language == "en") && <Modal btnText="More" className="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"/>}
+          { (language == "es") && <Modal btnText="Más" className="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"/>}
         </div>
         
       </div>
