@@ -5,7 +5,7 @@ import Header from "@/components/header/header";
 //import Footer from "../components/footer/footer";
 import SideBar from "../components/sidebar/sidebar";
 import MainContent from "../components/mainContent/mainContent";
-import randomGradients from '../src/randomGradient.js';
+//import randomGradients from '../src/randomGradient.js';
 
 export default function Home() {
   //const randomGradient1 = randomGradients.staticGradient();
