@@ -27,7 +27,7 @@ const MainContent = ({ gradient }) => {
         <h1 className="text-3xl md:text-4xl p-10 text-white font-bold px-2.5 py-1 rounded-full">
           {languageStrings["mainContent.title.qualifications"]}</h1>}
 
-      <div className="flex flex-wrap justify-center py-10">
+      <div className="flex flex-wrap justify-center py-16 sm:py-10">
         { showProjects && <ProjectList projects={projectsData} />}
         { !showProjects && <QualificationsList qualifications={qualificationsData} />}
       </div>

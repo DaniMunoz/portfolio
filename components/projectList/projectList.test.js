@@ -7,7 +7,6 @@ import projectsData from "../../public/json/projects.json";
 describe("ProjectList", () => {
 
   it('renders the ProjectList component', () => {
-    //const { getByText } = render(<Header />);
     render(<Provider store={store}><ProjectList projects={projectsData} /></Provider>);
     expect(screen.queryAllByRole('projectCard')).not.toHaveLength(0);
   });

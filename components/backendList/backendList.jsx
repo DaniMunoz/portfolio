@@ -1,9 +1,9 @@
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
 const backends = [
-  { id: 1, name: 'JSON Local files', unavailable: false },
+  { id: 1, name: 'NextJS JSON Local files', unavailable: false },
   { id: 2, name: 'MongoDB', unavailable: true },
   { id: 3, name: 'NodeJS + PostgreSQL', unavailable: true },
   { id: 4, name: 'Google Cloud - Java + Datastore', unavailable: true },
@@ -19,7 +19,7 @@ function BackendList() {
       <Listbox value={selected} onChange={setSelected} name="backend">
         <div className="relative mt-1">
         
-          <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white text-black py-2 pl-3 pr-10 text-center shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+          <Listbox.Button role="backendSelectorButton" className="relative w-full cursor-default rounded-lg bg-white text-black py-2 pl-3 pr-10 text-center shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
             <span className="block truncate">{selected.name}</span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon
@@ -36,10 +36,11 @@ function BackendList() {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
             >
-            <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base text-left shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-auto">
+            <Listbox.Options className="absolute mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base text-left shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {backends.map((backend, backendIdx) => (
                 <Listbox.Option
                   key={backendIdx}
+                  role="backendOption"
                   className={({ active, disabled }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
                       active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'

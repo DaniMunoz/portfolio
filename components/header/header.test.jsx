@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom';
 import '@testing-library/jest-dom/extend-expect';
-import { render, fireEvent } from '@testing-library/react';
-import { screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import Header from './Header';
 import { Provider } from 'react-redux';
 import store from '../../src/store/store';

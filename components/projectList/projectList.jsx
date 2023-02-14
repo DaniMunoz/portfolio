@@ -11,10 +11,6 @@ const ProjectList = ({ projects }) => {
   gradientes = projects.map(() => {
     return randomGradients.staticGradient();
   })
-
-  /**<div>
-            <Modal btnText='More...' className="flex items-center justify-center"></Modal>
-          </div> */
   
   const cards = projects.map((project, i) => (
     <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96">
