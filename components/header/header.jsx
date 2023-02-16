@@ -27,11 +27,11 @@ export default function Header() {
       <nav className="md:text-2xl basis-3/4">
         <div className="flex flex-row-reverse">
           <LanguageSelector />&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-amber-400 hover:bg-amber-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded">
+          <Link href="/" className="font-normal bg-amber-400 hover:bg-amber-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline">
             {languageStrings["header.contact"]}</Link>&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-teal-400 hover:bg-teal-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded" onClick={handleHideProjects}>
+          <Link href="/" className="font-normal bg-teal-400 hover:bg-teal-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleHideProjects}>
             {languageStrings["header.qualifications"]}</Link>&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-rose-400 hover:bg-rose-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded" onClick={handleShowProjects}>
+          <Link href="/" className="font-normal bg-rose-400 hover:bg-rose-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleShowProjects}>
             {languageStrings["header.projects"]}</Link>&nbsp;&nbsp;&nbsp;
         </div>
       </nav>

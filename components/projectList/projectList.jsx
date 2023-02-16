@@ -18,7 +18,9 @@ const ProjectList = ({ projects }) => {
 
       <div className="justify-between flex">
         <div className="ml-0 flex-shrink-0 block">
-          <Image alt={project.project_en} className="h-24 w-24 rounded-tl-lg object-cover" height={96} width={96} src={project.image}/>
+          <a href={project.customer_web} target="_blank" rel="noreferrer">
+            <Image alt={project.project_en} className="h-24 w-24 rounded-tl-lg object-cover" height={96} width={96} src={project.image}/>
+          </a>
         </div>
 
         <div className='bg-slate-200 w-full text-left relative'>

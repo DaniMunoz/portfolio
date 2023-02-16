@@ -6,7 +6,7 @@ const backends = [
   { id: 1, name: 'NextJS JSON Local files', unavailable: false },
   { id: 2, name: 'MongoDB', unavailable: true },
   { id: 3, name: 'NodeJS + PostgreSQL', unavailable: true },
-  { id: 4, name: 'Google Cloud - Java + Datastore', unavailable: true },
+  { id: 4, name: 'Google Cloud: Java + Datastore', unavailable: true },
   { id: 5, name: 'Google Firestore', unavailable: true },
 ]
 
@@ -14,7 +14,7 @@ function BackendList() {
     const [selected, setSelected] = useState(backends[0])
 
   return (
-    <div className="w-48 mx-auto">
+    <div className="w-52 mx-auto">
         
       <Listbox value={selected} onChange={setSelected} name="backend">
         <div className="relative mt-1">
@@ -36,7 +36,7 @@ function BackendList() {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
             >
-            <Listbox.Options className="absolute mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base text-left shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute ml-0 mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base text-left shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {backends.map((backend, backendIdx) => (
                 <Listbox.Option
                   key={backendIdx}
