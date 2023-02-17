@@ -26,7 +26,7 @@ const ProjectList = ({ projects }) => {
         <div className='bg-slate-200 w-full text-left relative'>
           { (language == "en") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_en}</h3>}
           { (language == "es") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_es}</h3>}
-          <a href={project.customer_web} className="p-2 text-sm font-medium text-slate-400 absolute bottom-0 left-0" target="_blank" rel="noreferrer">{project.customer}</a>
+          <a href={project.customer_web} className="p-2 text-sm font-medium text-slate-400 absolute bottom-0 left-0 no-underline" target="_blank" rel="noreferrer">{project.customer}</a>
           { (language == "en") && <Modal btnText="More" btnClassName="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"
                                     title={project.project_en} text={project.text_en}/>}
           { (language == "es") && <Modal btnText="Más" btnClassName="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"
