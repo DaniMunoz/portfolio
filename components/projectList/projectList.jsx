@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import React from 'react';
 import Image from "next/image";
 import randomGradients from '../../src/randomGradient.js';
+import Modal from '../modal/modal';
 
 const ProjectList = ({ projects }) => {
   const language = useSelector((state) => state.language.language);
@@ -17,15 +18,19 @@ const ProjectList = ({ projects }) => {
 
       <div className="justify-between flex">
         <div className="ml-0 flex-shrink-0 block">
-          <Image alt={project.project_en} className="h-24 w-24 rounded-tl-lg object-cover" height={96} width={96} src={project.image}/>
+          <a href={project.customer_web} target="_blank" rel="noreferrer">
+            <Image alt={project.project_en} className="h-24 w-24 rounded-tl-lg object-cover" height={96} width={96} src={project.image}/>
+          </a>
         </div>
 
         <div className='bg-slate-200 w-full text-left relative'>
           { (language == "en") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_en}</h3>}
           { (language == "es") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_es}</h3>}
           <a href={project.customer_web} className="p-2 text-sm font-medium text-slate-400 absolute bottom-0 left-0 no-underline" target="_blank" rel="noreferrer">{project.customer}</a>
-          { (language == "en") && <button className="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2">More...</button>}
-          { (language == "es") && <button className="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2">Más...</button>}
+          { (language == "en") && <Modal btnText="More" btnClassName="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"
+                                    title={project.project_en} text={project.text_en}/>}
+          { (language == "es") && <Modal btnText="Más" btnClassName="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"
+                                    title={project.project_es} text={project.text_es}/>}
         </div>
         
       </div>

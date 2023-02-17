@@ -5,14 +5,16 @@
       "header.qualifications": "Education",
       "header.contact": "Contact",
       "mainContent.title.projects": "PROJECTS",
-      "mainContent.title.qualifications": "DEGREES & CERTIFICATIONS"
+      "mainContent.title.qualifications": "DEGREES & CERTIFICATIONS",
+      "sideBar.stacksModal": "Purpose, tech stacks, changing backend"
     },
     "es": {
         "header.projects": "Proyectos",
         "header.qualifications": "Educación",
         "header.contact": "Contacto",
         "mainContent.title.projects": "PROYECTOS",
-        "mainContent.title.qualifications": "TÍTULOS Y CERTIFICACIONES"
+        "mainContent.title.qualifications": "TÍTULOS Y CERTIFICACIONES",
+        "sideBar.stacksModal": "Propósito, tecnologías, cambiar backend"
       }
   }
 ]
