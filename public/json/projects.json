@@ -16,7 +16,7 @@
     "project_es": "Gestión de Proyectos y Costes",
     "image": "/images/ptec-96.png",
     "customer": "PTec",
-    "customer_web": "http://www.ptec.es/",
+    "customer_web": "https://www.linkedin.com/company/ptec/",
     "summary_en": "Management dashboard, showing the progress of all the company's projects: costs, hours invested, revenues, profits, etc",
     "summary_es": "Muestra el progreso de todos los proyectos de la empresa: costes, horas invertidas, ingresos, beneficios, etc",
     "technologies": [ { "tech": ".NET"}, { "tech": "SQL_Server"}, { "tech": "DBNetSuite"}, { "tech": "JS"}],
