@@ -9,7 +9,7 @@ import MainContent from "../components/mainContent/mainContent";
 import projectsData from "../public/json/projects.json";
 import qualificationsData from "../public/json/qualifications.json";
 
-export default function Home() {
+export default function Home({ data}) {
   //const randomGradient1 = randomGradients.staticGradient();
   const randomGradient1 = "from-rose-100 via-slate-300 to-teal-100";
   //const randomGradient2 = helpers.staticGradient();
@@ -29,7 +29,7 @@ export default function Home() {
 
         <div className="w-full flex flex-col space-y-4 md:flex-row md:space-x-0 md:space-y-0">
           <SideBar />
-          <MainContent gradient={randomGradient1} projectsData={projectsData} qualificationsData={qualificationsData} />
+          <MainContent gradient={randomGradient1} projectsData={data.projects} qualificationsData={data.qualifications} />
         </div>
         
         </Provider>
@@ -38,6 +38,13 @@ export default function Home() {
   );
 }
 
+export async function getServerSideProps() {
+  return {
+    props: { data: {projects: projectsData,
+      qualifications: qualificationsData
+    }}
+  };
+}
 /*
 //This is one of the ways to obtain data from MongoDB server side
 //import clientPromise from '../lib/mongodb';
