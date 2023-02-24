@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import store from '../src/store/store';
 import Head from "next/head";
 import Header from "@/components/header/header";
-//import Footer from "../components/footer/footer";
+import Footer from "../components/footer/footer";
 import SideBar from "../components/sidebar/sidebar";
 import MainContent from "../components/mainContent/mainContent";
 //import randomGradients from '../src/randomGradient.js';
@@ -13,7 +13,7 @@ export default function Home() {
   //const randomGradient1 = randomGradients.staticGradient();
   const randomGradient1 = "from-rose-100 via-slate-300 to-teal-100";
   //const randomGradient2 = helpers.staticGradient();
-  //<Footer />
+  <Footer />
   return (
     <>
       <div className={"font-sans bg-gradient-to-br " + randomGradient1} >
