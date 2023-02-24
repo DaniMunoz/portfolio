@@ -1,26 +1,33 @@
-import { useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import { useSelector, useDispatch } from 'react-redux';
+import {backendActions} from '../../src/store/backend-slice';
 
 const backends = [
-  { id: 1, name: 'NextJS JSON Local files', unavailable: false },
-  { id: 2, name: 'MongoDB', unavailable: true },
-  { id: 3, name: 'NodeJS + PostgreSQL', unavailable: true },
-  { id: 4, name: 'Google Cloud: Java + Datastore', unavailable: true },
-  { id: 5, name: 'Google Firestore', unavailable: true },
+  { id: 0, name: 'NextJS JSON Local files', unavailable: false },
+  { id: 1, name: 'MongoDB', unavailable: false },
+  { id: 2, name: 'NodeJS + PostgreSQL', unavailable: true },
+  { id: 3, name: 'Google Cloud: Java + Datastore', unavailable: true },
+  { id: 4, name: 'Google Firestore', unavailable: true },
 ]
 
 function BackendList() {
-    const [selected, setSelected] = useState(backends[0])
+  const dispatch = useDispatch();
+  //To retrieve state:
+  const backendRedux = useSelector((state) => state.backend.backend);
+
+  const handleBackendChange = (event) => {
+    dispatch(backendActions.changeBackendTo(event.id));
+  };
 
   return (
     <div className="w-52 mx-auto">
         
-      <Listbox value={selected} onChange={setSelected} name="backend">
+      <Listbox value={backendRedux} onChange={handleBackendChange} name="backend">
         <div className="relative mt-1">
         
           <Listbox.Button role="backendSelectorButton" className="relative w-full cursor-default rounded-lg bg-white text-black py-2 pl-3 pr-10 text-center shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
-            <span className="block truncate">{selected.name}</span>
+            <span className="block truncate">{backends[backendRedux].name}</span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon
                 className="h-5 w-5 text-gray-400"

@@ -1,18 +1,29 @@
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-//import Link from "next/link";
-//import styles from "../dist/output.css";
-import ProjectList from "../projectList/projectList";
-import projectsData from "../../public/json/projects.json";
+import ProjectList from '../projectList/projectList';
 import QualificationsList from "../qualificationsList/qualificationsList";
-import qualificationsData from "../../public/json/qualifications.json";
 import languageData from '../../public/json/languages.json' assert { type: 'JSON' };
+import dataLoader from '../../src/obtainDataFromBackend';
 
-const MainContent = ({ gradient }) => {
-  //To retrieve state:
+const MainContent = ({ gradient, projectsData, qualificationsData }) => {
   const showProjects = useSelector((state) => state.showProjects.showProjects);
-  //Obtain current language from redux store
+  
   const language = useSelector((state) => state.language.language);
   const languageStrings = languageData[0][language];
+
+  const [projects, setProjects] = useState(projectsData);
+  const [qualifications, setQualifications] = useState(qualificationsData);
+
+  //Obtains data from the user's selected Data Source
+  const backendRedux = useSelector((state) => state.backend.backend);
+  useEffect(() => {
+    async function fetchData() {
+      const response = await dataLoader.obtainData(backendRedux);
+      setProjects(response.data.projects);
+      setQualifications(response.data.qualifications);
+    }
+    fetchData();
+  }, [backendRedux, projectsData, qualificationsData]); 
 
   //<article className="rounded-full bg-gradient-to-br from-rose-100 via-slate-300 to-teal-100 md:w-2/3 lg:w-4/5 px-5 pt-20 min-h-[85vh] text-center scroll-auto">
   //<article className="rounded-full bg-gradient-to-br from-rose-100 via-slate-300 to-teal-100 md:w-2/3 lg:w-4/5 px-5 pt-20 min-h-[85vh] text-center scroll-auto"></article>
@@ -28,8 +39,8 @@ const MainContent = ({ gradient }) => {
           {languageStrings["mainContent.title.qualifications"]}</h1>}
 
       <div className="flex flex-wrap justify-center py-16 sm:py-10">
-        { showProjects && <ProjectList projects={projectsData} />}
-        { !showProjects && <QualificationsList qualifications={qualificationsData} />}
+        { showProjects && <ProjectList projects={projects} />}
+        { !showProjects && <QualificationsList qualifications={qualifications} />}
       </div>
     </article>
   );
