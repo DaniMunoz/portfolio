@@ -2,16 +2,18 @@ import { Provider } from 'react-redux';
 import store from '../src/store/store';
 import Head from "next/head";
 import Header from "@/components/header/header";
-//import Footer from "../components/footer/footer";
+import Footer from "../components/footer/footer";
 import SideBar from "../components/sidebar/sidebar";
 import MainContent from "../components/mainContent/mainContent";
 //import randomGradients from '../src/randomGradient.js';
+import projectsData from "../public/json/projects.json";
+import qualificationsData from "../public/json/qualifications.json";
 
-export default function Home() {
+export default function Home({ data}) {
   //const randomGradient1 = randomGradients.staticGradient();
   const randomGradient1 = "from-rose-100 via-slate-300 to-teal-100";
   //const randomGradient2 = helpers.staticGradient();
-  //<Footer />
+  <Footer />
   return (
     <>
       <div className={"font-sans bg-gradient-to-br " + randomGradient1} >
@@ -27,7 +29,7 @@ export default function Home() {
 
         <div className="w-full flex flex-col space-y-4 md:flex-row md:space-x-0 md:space-y-0">
           <SideBar />
-          <MainContent gradient={randomGradient1}/>
+          <MainContent gradient={randomGradient1} projectsData={data.projects} qualificationsData={data.qualifications} />
         </div>
         
         </Provider>
@@ -35,3 +37,60 @@ export default function Home() {
     </>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: { data: {projects: projectsData,
+      qualifications: qualificationsData
+    }}
+  };
+}
+/*
+//This is one of the ways to obtain data from MongoDB server side
+//import clientPromise from '../lib/mongodb';
+//import obtainData from '../src/obtainDataFromBackend';
+//export default function Home({ datos }) {
+//const backend = useSelector((state) => state.backend.backend);
+
+export async function getServerSideProps() {
+  let backend = 0;
+  switch (backend) {
+    case 0:
+        console.log('Local JSON files');
+        return {props: { datos: {projects: projectsData, qualifications: qualificationsData}}};
+        break;
+    case 1:
+        console.log('MongoDB');
+        try {
+          const client = await clientPromise;
+          const db = client.db("curriculum_vitae");
+      
+          const projects = await db
+              .collection("projects")
+              .find({})
+              .sort({ id: 1 })
+              .limit(20)
+              .toArray();
+      
+          const qualifications = await db
+              .collection("qualifications")
+              .find({})
+              .sort({ id: 1 })
+              .limit(20)
+              .toArray();
+      
+          return {
+            props: { datos: {projects: JSON.parse(JSON.stringify(projects)),
+                    qualifications: JSON.parse(JSON.stringify(qualifications))} },
+          };
+        } catch (e) {
+            console.error(e);
+        }
+        break;
+    case 2:
+        break;
+    default:
+        break;
+    }  
+}
+*/

@@ -20,6 +20,7 @@ export default function MyModal(props) {
         type="button"
         onClick={openModal}
         className={props.btnClassName}
+        data-testid="btnOpen"
       >
         {props.btnText}
       </button>
@@ -53,6 +54,7 @@ export default function MyModal(props) {
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
+                    data-testid="dialogTitle"
                   >
                     {props.title}
                   </Dialog.Title>
@@ -64,6 +66,7 @@ export default function MyModal(props) {
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
+                      data-testid="btnClose"
                     >
                       {props.closeBtnText || ((language == 'en') && "Close") || ((language == 'es') && "Cerrar")}
                     </button>

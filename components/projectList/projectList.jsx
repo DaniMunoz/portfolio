@@ -3,8 +3,16 @@ import React from 'react';
 import Image from "next/image";
 import randomGradients from '../../src/randomGradient.js';
 import Modal from '../modal/modal';
+import dynamic from 'next/dynamic';
 
 const ProjectList = ({ projects }) => {
+
+  //RandomGradient needs to render side client. Otherwise, server and client classNames clash
+  const RandomGradient = dynamic(() => 
+    import('../randomGradient/randomGradient'), {
+        ssr: false,
+    });
+
   const language = useSelector((state) => state.language.language);
 
   let gradientes = [];
@@ -14,7 +22,7 @@ const ProjectList = ({ projects }) => {
   
   const cards = projects.map((project, i) => (
     <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96">
-      <span id={"gradiente-" + project.id} className={"absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r " + gradientes[i]}></span>
+      <RandomGradient id={"gradiente-" + project.id}></RandomGradient>
 
       <div className="justify-between flex">
         <div className="ml-0 flex-shrink-0 block">

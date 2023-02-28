@@ -14,23 +14,23 @@ describe("Language", () => {
       cy.get('[role="languageSelector"]').select(0).should('have.value', 'en');
       // The new page should contain an anchor with "Projects"
       cy.get("a").contains("Projects");
-      cy.get("a").contains("Degrees & Certifications");
+      cy.get("a").contains("Education");
       cy.get("a").contains("Contact");
       cy.get("a").contains("Projects").click();
-      cy.get("h1").contains("Projects");
-      cy.get("a").contains("Degrees & Certifications").click();
-      cy.get("h1").contains("Degrees & Certifications");
+      cy.get("h1").contains("PROJECTS");
+      cy.get("a").contains("Education").click();
+      cy.get("h1").contains("DEGREES & CERTIFICATIONS");
 
       // Find the languageSelector component and choose 'Español'
       cy.get('[role="languageSelector"]').select(1).should('have.value', 'es');
       // The new page should contain an anchor with "Proyectos"
       cy.get("a").contains("Proyectos");
-      cy.get("a").contains("Títulos y Certificaciones");
+      cy.get("a").contains("Educación");
       cy.get("a").contains("Contacto");
       cy.get("a").contains("Proyectos").click();
-      cy.get("h1").contains("Proyectos");
-      cy.get("a").contains("Títulos y Certificaciones").click();
-      cy.get("h1").contains("Títulos y Certificaciones");
+      cy.get("h1").contains("PROYECTOS");
+      cy.get("a").contains("Educación").click();
+      cy.get("h1").contains("TÍTULOS Y CERTIFICACIONES");
     });
   });
 
