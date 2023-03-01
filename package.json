@@ -7,7 +7,9 @@
     "test": "jest --watch --coverage",
     "testAll": "jest --watchAll --coverage",
     "test:ci": "jest --ci",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "prisma:generate": "prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.10",
