@@ -1,4 +1,4 @@
-export default async (req, res) => {
+const obtainQualifications = async (req, res) => {
     try {
         const uri = process.env.AWS_QUALIFICATIONS_URI
         if (!process.env.AWS_QUALIFICATIONS_URI) {
@@ -10,4 +10,6 @@ export default async (req, res) => {
     } catch (e) {
         console.error(e);
     }
- };
+};
+
+export default obtainQualifications;

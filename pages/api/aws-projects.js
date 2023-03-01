@@ -1,4 +1,4 @@
-export default async (req, res) => {
+const obtainProjects = async (req, res) => {
     try {
         const uri = process.env.AWS_PROJECTS_URI
         if (!process.env.AWS_PROJECTS_URI) {
@@ -11,3 +11,5 @@ export default async (req, res) => {
         console.error(e);
     }
  };
+
+export default obtainProjects;

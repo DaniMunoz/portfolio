@@ -56,11 +56,9 @@ helpers.obtainData = async (backend) => {
                 value.technologies = myArray;
             }
             projects = JSON.parse(JSON.stringify(dataProjects));
-
             responseQualifications = await fetch('/api/prisma-supabase-qualifications');
             dataQualifications = await responseQualifications.json();
             qualifications = JSON.parse(JSON.stringify(dataQualifications));
-
             return { data: {projects: projects, qualifications: qualifications}};
             break;
         default:

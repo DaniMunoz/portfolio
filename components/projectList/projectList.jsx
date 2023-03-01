@@ -43,7 +43,7 @@ const ProjectList = ({ projects }) => {
         
       </div>
 
-      <div className="sm:pr-8 p-3 text-justify text-sm">
+      <div className="sm:pr-8 p-3 text-justify text-sm bg-slate-50">
         { (language == "en") && <p className="text-gray-900 p-2" dangerouslySetInnerHTML={{__html: project.summary_en}}></p>}
         { (language == "es") && <p className="text-gray-900 p-2" dangerouslySetInnerHTML={{__html: project.summary_es}}></p>}
         <div className="p-2 mt-2">

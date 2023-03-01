@@ -1,6 +1,6 @@
 import clientPromise from "../../lib/mongodb";
 
-export default async (req, res) => {
+const obtainProjects = async (req, res) => {
    try {
        const client = await clientPromise;
        const db = client.db("curriculum_vitae");
@@ -17,3 +17,5 @@ export default async (req, res) => {
        console.error(e);
    }
 };
+
+export default obtainProjects;
