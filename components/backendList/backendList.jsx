@@ -7,7 +7,7 @@ const backends = [
   { id: 0, name: 'NextJS JSON Local files', unavailable: false },
   { id: 1, name: 'MongoDB', unavailable: false },
   { id: 2, name: 'AWS Lambda + DynamoDB', unavailable: false },
-  { id: 3, name: 'NodeJS + PostgreSQL', unavailable: true },
+  { id: 3, name: 'Supabase + Prisma + PostgreSQL', unavailable: false },
   { id: 4, name: 'Google Cloud: Java + Datastore', unavailable: true },
   { id: 5, name: 'Google Firestore', unavailable: true },
 ]

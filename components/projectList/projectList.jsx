@@ -50,16 +50,16 @@ const ProjectList = ({ projects }) => {
         {
           project.technologies.map((tech) => {            
               switch (tech.tech) {
-                case "AWS_Lambda":
-                  return <span key={tech.tech} className="bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
-                case "AWS_DynamoDB":
-                  return <span key={tech.tech} className="bg-indigo-400 text-indigo-100 dark:bg-indigo-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case ".NET":
                   return <span key={tech.tech} className="bg-blue-400 text-blue-100 dark:bg-blue-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Android":
                   return <span key={tech.tech} className="bg-green-500 text-green-100 dark:bg-green-500 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;                  
                 case "AutoCAD":
                   return <span key={tech.tech} className="bg-rose-400 text-rose-100 dark:bg-rose-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                case "AWS_Lambda":
+                  return <span key={tech.tech} className="bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                case "AWS_DynamoDB":
+                  return <span key={tech.tech} className="bg-indigo-400 text-indigo-100 dark:bg-indigo-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Blender":
                   return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Bootstrap":
@@ -88,10 +88,14 @@ const ProjectList = ({ projects }) => {
                   return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "PostgreSQL":
                   return <span key={tech.tech} className="bg-sky-400 text-sky-100 dark:bg-sky-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                case "Prisma":
+                  return <span key={tech.tech} className="bg-green-400 text-green-100 dark:bg-green-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "React":
                   return <span key={tech.tech} className="bg-purple-400 text-purple-100 dark:bg-purple-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Smarty":
                   return <span key={tech.tech} className="bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-black text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                case "Supabase":
+                  return <span key={tech.tech} className="bg-emerald-400 text-emerald-100 dark:bg-emerald-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "SQL_Server":
                   return <span key={tech.tech} className="bg-fuchsia-400 text-fuchsia-100 dark:bg-fuchsia-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Swift3D":
