@@ -19,7 +19,6 @@ async function insertInitialValues() {
 }
 
 const obtainProjects = async (req, res) => {
-    console.log("feed 0");
     try {
         const feed = await prisma.project.findMany({
             orderBy: [
