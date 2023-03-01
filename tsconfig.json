@@ -21,6 +21,6 @@
       "@/styles/*": ["styles/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts", "components/projectList/projectList.jsx", "__tests__/snapshot.tsx.tmp", "__tests__/index.test.tsx.tmp", "pages/test-mongodb5.js", "pages/index.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts", "components/projectList/projectList.jsx", "__tests__/snapshot.tsx.tmp", "__tests__/index.test.tsx.tmp", "pages/test-mongodb5.js", "pages/index.js"],
   "exclude": ["node_modules"]
 }

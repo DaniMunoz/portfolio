@@ -13,6 +13,6 @@ describe("BackendList", () => {
     render(<Provider store={store}><BackendList /></Provider>);
     const backendSelectorButton = screen.getByRole("backendSelectorButton");
     fireEvent.click(backendSelectorButton);
-    expect(await screen.findAllByRole("option")).toHaveLength(5);
+    expect(await screen.findAllByRole("option")).toHaveLength(6);
   });
 });
