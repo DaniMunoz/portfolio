@@ -8,7 +8,7 @@
     "testAll": "jest --watchAll --coverage",
     "test:ci": "jest --ci",
     "cypress": "cypress open",
-    "vercel-build": "prisma generate && prisma migrate deploy",
+    "vercel-build": "prisma migrate deploy",
     "prisma:generate": "prisma generate"
   },
   "dependencies": {
