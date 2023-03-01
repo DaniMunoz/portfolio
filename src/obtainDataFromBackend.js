@@ -46,6 +46,23 @@ helpers.obtainData = async (backend) => {
             
             return { data: {projects: projects, qualifications: qualifications}};
             break;
+        case 3:
+            console.log('Supabase PostgreSQL');
+            responseProjects = await fetch('/api/prisma-supabase-projects');
+            dataProjects = await responseProjects.json();
+            //transforms technologies string '.NET,SQL_Server' into [{"tech": ".NET"}, {"tech": "SQL_Server"}]
+            for (let [key, value] of dataProjects.entries()) {
+                const myArray = value.technologies.split(",").map((x) => ({"tech": x}));
+                value.technologies = myArray;
+            }
+            projects = JSON.parse(JSON.stringify(dataProjects));
+
+            responseQualifications = await fetch('/api/prisma-supabase-qualifications');
+            dataQualifications = await responseQualifications.json();
+            qualifications = JSON.parse(JSON.stringify(dataQualifications));
+
+            return { data: {projects: projects, qualifications: qualifications}};
+            break;
         default:
             break;
         }    
