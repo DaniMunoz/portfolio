@@ -50,10 +50,14 @@ const ProjectList = ({ projects }) => {
         {
           project.technologies.map((tech) => {            
               switch (tech.tech) {
+                case "AWS_Lambda":
+                  return <span key={tech.tech} className="bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                case "AWS_DynamoDB":
+                  return <span key={tech.tech} className="bg-indigo-400 text-indigo-100 dark:bg-indigo-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case ".NET":
                   return <span key={tech.tech} className="bg-blue-400 text-blue-100 dark:bg-blue-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Android":
-                  return <span key={tech.tech} className="bg-green-500 text-green-100 dark:bg-green-500 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                  return <span key={tech.tech} className="bg-green-500 text-green-100 dark:bg-green-500 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;                  
                 case "AutoCAD":
                   return <span key={tech.tech} className="bg-rose-400 text-rose-100 dark:bg-rose-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Blender":
