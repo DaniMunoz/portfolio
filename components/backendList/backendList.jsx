@@ -10,6 +10,7 @@ const backends = [
   { id: 3, name: 'Supabase + Prisma + PostgreSQL', unavailable: false },
   { id: 4, name: 'Google Cloud: Java + Datastore', unavailable: true },
   { id: 5, name: 'Google Firestore', unavailable: true },
+  { id: 6, name: 'Prisma + MySQL', unavailable: true },
 ]
 
 function BackendList() {
