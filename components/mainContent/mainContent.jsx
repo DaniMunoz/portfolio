@@ -36,7 +36,7 @@ const MainContent = ({ gradient, projectsData, qualificationsData }) => {
   //<article className="rounded-full bg-gradient-to-br from-rose-100 via-slate-300 to-teal-100 md:w-2/3 lg:w-4/5 px-5 pt-20 min-h-[85vh] text-center scroll-auto"></article>
   //<article className={"bg-gradient-to-br " + gradient + " rounded-full md:w-2/3 lg:w-4/5 px-5 pt-20 min-h-[100vh] text-center scroll-auto"}>
   return (
-    <article className={"bg-gradient-to-br " + gradient + " rounded-full md:w-2/3 lg:w-4/5 px-5 pt-4 sm:pt-20 min-h-[100vh] text-center scroll-auto"}>
+    <article id="content" className={"bg-gradient-to-br " + gradient + " rounded-full md:w-2/3 lg:w-4/5 px-5 pt-20 min-h-[100vh] text-center scroll-auto"}>
       
       { showProjects && 
         <h1 className="text-3xl md:text-4xl p-10 text-white font-bold px-2.5 py-1 rounded-full">

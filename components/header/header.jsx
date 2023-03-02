@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import {showProjectsActions} from '../../src/store/showProjects-slice';
+import { showProjectsActions } from '../../src/store/showProjects-slice';
 import Link from "next/link";
 //import Image from "next/image";
 import LanguageSelector from "../languageSelector/languageSelector";
@@ -19,6 +19,12 @@ export default function Header() {
     dispatch(showProjectsActions.changeShowProjectsTo(false));
   };
 
+  let enlace = "/"
+  if (typeof window != "undefined") { 
+    /* we're on the client */ 
+    enlace = window.innerWidth > 768 ? '/' : '#content';
+  }
+
   return (
     <header className="bg-gradient-to-br from-rose-100 via-slate-300 to-teal-100 p-5 sticky top-0 flex flex-row z-10">
       <Link className="basis-1/4" href="/">
@@ -29,9 +35,9 @@ export default function Header() {
           <LanguageSelector />&nbsp;&nbsp;&nbsp;
           <Link href="/" className="font-normal bg-amber-400 hover:bg-amber-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline">
             {languageStrings["header.contact"]}</Link>&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-teal-400 hover:bg-teal-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleHideProjects}>
+          <Link href={enlace} className="font-normal bg-teal-400 hover:bg-teal-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleHideProjects}>
             {languageStrings["header.qualifications"]}</Link>&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-rose-400 hover:bg-rose-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleShowProjects}>
+          <Link href={enlace} className="font-normal bg-rose-400 hover:bg-rose-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleShowProjects}>
             {languageStrings["header.projects"]}</Link>&nbsp;&nbsp;&nbsp;
         </div>
       </nav>
