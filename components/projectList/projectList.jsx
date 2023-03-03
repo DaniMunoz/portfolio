@@ -23,7 +23,7 @@ const ProjectList = ({ projects }) => {
   
   const cards = projects.map((project, i) => (
     <div key={project.id} role="projectCard" href="#" 
-      className="group relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96 transition-all duration-500 hover:rounded hover:m-7">
+      className="group relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white shadow-lg hover:shadow-xl shadow-slate-400/30 hover:shadow-white/50 w-80 sm:w-96 transition-all duration-500 hover:rounded">
       <RandomDynamicGradient id={"gradiente-" + project.id}></RandomDynamicGradient>
 
       <div className="justify-between flex">
