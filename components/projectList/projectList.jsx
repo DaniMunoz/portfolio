@@ -23,7 +23,7 @@ const ProjectList = ({ projects }) => {
   
   const cards = projects.map((project, i) => (
     <div key={project.id} role="projectCard" href="#" 
-      className="group relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white shadow-lg hover:shadow-xl shadow-slate-400/30 hover:shadow-white/50 w-80 sm:w-96 transition-all duration-500 hover:rounded">
+      className="group relative block overflow-hidden rounded-lg p-0 max-w-sm m-6 mx-0 sm:m-8 bg-slate-100 hover:bg-white shadow-lg hover:shadow-xl shadow-slate-400/30 hover:shadow-white/50 w-96 sm:w-96 transition-all duration-500 hover:rounded hover:saturate-150">
       <RandomDynamicGradient id={"gradiente-" + project.id}></RandomDynamicGradient>
 
       <div className="justify-between flex">
@@ -37,9 +37,9 @@ const ProjectList = ({ projects }) => {
           { (language == "en") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_en}</h3>}
           { (language == "es") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_es}</h3>}
           <a href={project.customer_web} className="p-2 text-sm font-medium text-slate-400 absolute bottom-0 left-0 no-underline" target="_blank" rel="noreferrer">{project.customer}</a>
-          { (language == "en") && <Modal btnText="More" btnClassName="transition-all duration-500 bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 group-hover:px-4 py-1 group-hover:py-2 rounded absolute bottom-2 right-2"
+          { (language == "en") && <Modal btnText="More" btnClassName="transition-all duration-500 bg-slate-300 group-hover:bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 group-hover:px-4 py-1 group-hover:py-2 rounded absolute bottom-2 right-2"
                                     title={project.project_en} text={project.text_en}/>}
-          { (language == "es") && <Modal btnText="Más" btnClassName="transition-all duration-500 bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 group-hover:px-4 py-1 group-hover:py-2 rounded absolute bottom-2 right-2"
+          { (language == "es") && <Modal btnText="Más" btnClassName="transition-all duration-500 bg-slate-300 group-hover:bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 group-hover:px-4 py-1 group-hover:py-2 rounded absolute bottom-2 right-2"
                                     title={project.project_es} text={project.text_es}/>}
         </div>
         

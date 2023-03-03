@@ -6,7 +6,7 @@ import styles from './qualificationsList.module.css';
 const QualificationsList = ({ qualifications }) => {   
   const language = useSelector((state) => state.language.language);
   const cards = qualifications.map((qualification) => (
-    <figure key={qualification.id}  role="qualificationCard" className="flex bg-slate-100 rounded-xl p-0 dark:bg-slate-100 hover:bg-white max-w-sm m-4 drop-shadow-md hover:drop-shadow-xl shadow-slate-900">
+    <figure key={qualification.id}  role="qualificationCard" className="group relative flex bg-slate-100 rounded-xl p-0 dark:bg-slate-100 max-w-sm m-4 drop-shadow-md hover:drop-shadow-xl shadow-slate-900 transition-all duration-500 hover:saturate-200">
       <Image className="rounded-l-xl w-48 h-auto mx-auto" src={qualification.image} alt="" width="120" height="100" />
       <div className="pt-2 p-2 sm:pt-4 sm:p-4 text-left space-y-4 w-80 sm:w-96 relative">
         <figcaption className="text-sm sm:text-base font-medium">          

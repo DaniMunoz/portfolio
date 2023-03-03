@@ -5,14 +5,15 @@ import Header from "@/components/header/header";
 import Footer from "../components/footer/footer";
 import SideBar from "../components/sidebar/sidebar";
 import MainContent from "../components/mainContent/mainContent";
-//import randomGradients from '../src/randomGradient.js';
+import randomGradients from '../src/randomGradient.js';
 import projectsData from "../public/json/projects.json";
 import qualificationsData from "../public/json/qualifications.json";
 
 export default function Home({ data}) {
   //const randomGradient1 = randomGradients.staticGradient();
+  //const randomGradient1 = randomGradients.hoverGradient();
   const randomGradient1 = "from-rose-100 via-slate-300 to-teal-100";
-  //const randomGradient2 = helpers.staticGradient();
+  //const randomGradient1 = helpers.staticGradient();
   
   return (
     <>
