@@ -2,25 +2,33 @@ const helpers = function () {};
 
 //TailwindCSS can't work with dynamic classes, so we will take random static classes
 
-const fromColors = [//'from-slate-300', 'from-gray-300', 'from-zinc-300', 'from-neutral-300', 'from-stone-300',
-    'from-red-300', 'from-orange-300'
-    , 'from-amber-300', 'from-yellow-300', 'from-lime-300', 'from-green-300', 'from-emerald-300', 'from-teal-300', 'from-cyan-300', 'from-sky-300'
-    , 'from-blue-300', 'from-indigo-300', 'from-violet-300', 'from-purple-300', 'from-fuchsia-300', 'from-pink-300', 'from-rose-100'];
+const fromColors = [//'from-slate-400', 'from-gray-400', 'from-zinc-400', 'from-neutral-400', 'from-stone-400',
+    //'from-red-400', 'from-orange-400', 'from-amber-400', 'from-yellow-400', 'from-fuchsia-400', 'from-pink-400', 'from-rose-100'
+    'from-lime-400', 'from-green-400', 'from-emerald-400', 'from-teal-400', 'from-cyan-400', 'from-sky-400'
+    , 'from-blue-400', 'from-indigo-400', 'from-violet-400', 'from-purple-400'];
 
-const viaColors = [//'via-slate-300', 'via-gray-300', 'via-zinc-300', 'via-neutral-300', 'via-stone-300', 
-    'via-red-300', 'via-orange-300'
-    , 'via-amber-300', 'via-yellow-300', 'via-lime-300', 'via-green-300', 'via-emerald-300', 'via-teal-300', 'via-cyan-300', 'via-sky-300'
-    , 'via-blue-300', 'via-indigo-300', 'via-violet-300', 'via-purple-300', 'via-fuchsia-300', 'via-pink-300', 'via-rose-100']; 
+const viaColors = [//'via-slate-400', 'via-gray-400', 'via-zinc-400', 'via-neutral-400', 'via-stone-400', 
+    'via-red-400', 'via-orange-400' , 'via-amber-400', 'via-yellow-400', 'via-fuchsia-400', 'via-pink-400', 'via-rose-100'
+    //, 'via-lime-400', 'via-green-400', 'via-emerald-400', 'via-teal-400', 'via-cyan-400', 'via-sky-400'
+    //, 'via-blue-400', 'via-indigo-400', 'via-violet-400', 'via-purple-400'
+    ]; 
 
-const toColors = [//'to-slate-300', 'to-gray-300', 'to-zinc-300', 'to-neutral-300', 'to-stone-300', 
-    'to-red-300', 'to-orange-300'
-    , 'to-amber-300', 'to-yellow-300', 'to-lime-300', 'to-green-300', 'to-emerald-300', 'to-teal-300', 'to-cyan-300', 'to-sky-300'
-    , 'to-blue-300', 'to-indigo-300', 'to-violet-300', 'to-purple-300', 'to-fuchsia-300', 'to-pink-300', 'to-rose-100'];
+const toColors = [//'to-slate-400', 'to-gray-400', 'to-zinc-400', 'to-neutral-400', 'to-stone-400', 
+    //'to-red-400', 'to-orange-400', 'to-amber-400', 'to-yellow-400', 'to-fuchsia-400', 'to-pink-400', 'to-rose-100'
+    'to-lime-400', 'to-green-400', 'to-emerald-400', 'to-teal-400', 'to-cyan-400', 'to-sky-400'
+    , 'to-blue-400', 'to-indigo-400', 'to-violet-400', 'to-purple-400'];
 
 helpers.staticGradient = () => {
     return fromColors[Math.floor(Math.random() * 17)] 
-        + " " + viaColors[Math.floor(Math.random() * 17)] 
-        + " " + toColors[Math.floor(Math.random() * 17)];
+        //+ " " + viaColors[Math.floor(Math.random() * 17)] 
+        + " " + toColors[Math.floor(Math.random() * 17)]
+}
+
+helpers.hoverGradient = () => {
+    let fromColor = fromColors[Math.floor(Math.random() * 10)];
+    let viaColor = viaColors[Math.floor(Math.random() * 7)];
+    let toColor = toColors[Math.floor(Math.random() * 10)];
+    return " transition-all duration-500 " + fromColor + " " + viaColor + " " + toColor + " bg-size-200 group-hover:bg-right-bottom"
 }
 
 export default helpers;

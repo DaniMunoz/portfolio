@@ -7,7 +7,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      //for gradient hover effect
+      backgroundSize: {
+        "size-200": "200% 200%",
+      },
+    },
   },
   plugins: [],
 }
