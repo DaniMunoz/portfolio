@@ -47,6 +47,18 @@ helpers.obtainData = async (backend) => {
             return { data: {projects: projects, qualifications: qualifications}};
             break;
         case 3:
+            console.log('Firebase');
+            responseProjects = await fetch('/api/firebase-projects');
+            dataProjects = await responseProjects.json();
+            projects = JSON.parse(JSON.stringify(dataProjects));
+
+            responseQualifications = await fetch('/api/firebase-qualifications');
+            dataQualifications = await responseQualifications.json();
+            qualifications = JSON.parse(JSON.stringify(dataQualifications));
+
+            return { data: {projects: projects, qualifications: qualifications}};
+            break;
+        case 4:
             console.log('Supabase PostgreSQL');
             responseProjects = await fetch('/api/prisma-supabase-projects');
             dataProjects = await responseProjects.json();

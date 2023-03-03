@@ -4,25 +4,27 @@ import Image from "next/image";
 import randomGradients from '../../src/randomGradient.js';
 import Modal from '../modal/modal';
 import dynamic from 'next/dynamic';
+import styles from './projectList.module.css';
 
 const ProjectList = ({ projects }) => {
 
-  //RandomGradient needs to render side client. Otherwise, server and client classNames clash
-  const RandomGradient = dynamic(() => 
-    import('../randomGradient/randomGradient'), {
-        ssr: false,
-    });
+  //RandomDynamicGradient needs to render side client. Otherwise, server and client classNames clash
+  const RandomDynamicGradient = dynamic(() => 
+  import('../randomDynamicGradient/randomDynamicGradient'), {
+      ssr: false,
+  });
 
   const language = useSelector((state) => state.language.language);
 
   let gradientes = [];
   gradientes = projects.map(() => {
-    return randomGradients.staticGradient();
+    return randomGradients.hoverGradient();
   })
   
   const cards = projects.map((project, i) => (
-    <div key={project.id} role="projectCard" href="#" className="relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96">
-      <RandomGradient id={"gradiente-" + project.id}></RandomGradient>
+    <div key={project.id} role="projectCard" href="#" 
+      className="group relative block overflow-hidden rounded-lg p-0 max-w-sm m-8 bg-slate-100 hover:bg-white drop-shadow-md hover:drop-shadow-xl shadow-slate-900 w-80 sm:w-96 transition-all duration-500 hover:rounded hover:m-7">
+      <RandomDynamicGradient id={"gradiente-" + project.id}></RandomDynamicGradient>
 
       <div className="justify-between flex">
         <div className="ml-0 flex-shrink-0 block">
@@ -35,9 +37,9 @@ const ProjectList = ({ projects }) => {
           { (language == "en") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_en}</h3>}
           { (language == "es") && <h3 className="p-2 text-lg font-bold text-sky-500 dark:text-sky-500">{project.project_es}</h3>}
           <a href={project.customer_web} className="p-2 text-sm font-medium text-slate-400 absolute bottom-0 left-0 no-underline" target="_blank" rel="noreferrer">{project.customer}</a>
-          { (language == "en") && <Modal btnText="More" btnClassName="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"
+          { (language == "en") && <Modal btnText="More" btnClassName="transition-all duration-500 bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 group-hover:px-4 py-1 group-hover:py-2 rounded absolute bottom-2 right-2"
                                     title={project.project_en} text={project.text_en}/>}
-          { (language == "es") && <Modal btnText="Más" btnClassName="bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 py-1 rounded absolute bottom-2 right-2"
+          { (language == "es") && <Modal btnText="Más" btnClassName="transition-all duration-500 bg-blue-400 hover:bg-blue-500 text-white text-sm px-2 group-hover:px-4 py-1 group-hover:py-2 rounded absolute bottom-2 right-2"
                                     title={project.project_es} text={project.text_es}/>}
         </div>
         
@@ -57,9 +59,9 @@ const ProjectList = ({ projects }) => {
                 case "AutoCAD":
                   return <span key={tech.tech} className="bg-rose-400 text-rose-100 dark:bg-rose-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "AWS_Lambda":
-                  return <span key={tech.tech} className="bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                  return <span key={tech.tech} className={"bg-orange-400 text-orange-100 dark:bg-orange-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full " + styles.pulse}>{tech.tech}</span>;
                 case "AWS_DynamoDB":
-                  return <span key={tech.tech} className="bg-indigo-400 text-indigo-100 dark:bg-indigo-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                  return <span key={tech.tech} className={"bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full " + styles.pulse}>{tech.tech}</span>;
                 case "Blender":
                   return <span key={tech.tech} className="bg-violet-400 text-violet-100 dark:bg-violet-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Bootstrap":
@@ -70,6 +72,8 @@ const ProjectList = ({ projects }) => {
                   return <span key={tech.tech} className="bg-indigo-400 text-indigo-100 dark:bg-indigo-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Google_Cloud":
                   return <span key={tech.tech} className="bg-orange-400 text-orange-100 dark:bg-orange-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                case "Google_Firebase":
+                  return <span key={tech.tech} className={"bg-orange-400 text-orange-100 dark:bg-orange-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full  " + styles.pulse}>{tech.tech}</span>;
                 case "IBM_Watson":
                   return <span key={tech.tech} className="bg-pink-400 text-pink-100 dark:bg-pink-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Java":
@@ -79,7 +83,7 @@ const ProjectList = ({ projects }) => {
                 case "Meta4":
                   return <span key={tech.tech} className="bg-sky-400 text-sky-100 dark:bg-sky-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "MongoDB":
-                  return <span key={tech.tech} className="bg-lime-400 text-lime-100 dark:bg-lime-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                  return <span key={tech.tech} className={"bg-lime-400 text-lime-100 dark:bg-lime-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full " + styles.pulse}>{tech.tech}</span>;
                 case "NextJS":
                   return <span key={tech.tech} className="bg-pink-400 text-pink-100 dark:bg-pink-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "NodeJS":
@@ -89,13 +93,13 @@ const ProjectList = ({ projects }) => {
                 case "PostgreSQL":
                   return <span key={tech.tech} className="bg-sky-400 text-sky-100 dark:bg-sky-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Prisma":
-                  return <span key={tech.tech} className="bg-green-400 text-green-100 dark:bg-green-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                  return <span key={tech.tech} className={"bg-green-400 text-green-100 dark:bg-green-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full " + styles.pulse}>{tech.tech}</span>;
                 case "React":
                   return <span key={tech.tech} className="bg-purple-400 text-purple-100 dark:bg-purple-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Smarty":
                   return <span key={tech.tech} className="bg-amber-400 text-amber-100 dark:bg-amber-400 dark:text-black text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Supabase":
-                  return <span key={tech.tech} className="bg-emerald-400 text-emerald-100 dark:bg-emerald-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
+                  return <span key={tech.tech} className={"bg-emerald-400 text-emerald-100 dark:bg-emerald-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full " + styles.pulse}>{tech.tech}</span>;
                 case "SQL_Server":
                   return <span key={tech.tech} className="bg-fuchsia-400 text-fuchsia-100 dark:bg-fuchsia-400 dark:text-white text-xs font-medium mr-2 px-2.5 py-1 rounded-full ">{tech.tech}</span>;
                 case "Swift3D":

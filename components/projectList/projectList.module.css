@@ -2,3 +2,16 @@
   text-decoration: underline;
   color: rgb(2 132 199);
 }
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(243, 114, 243, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+}
