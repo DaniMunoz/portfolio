@@ -13,7 +13,7 @@ export default function Home({ data}) {
   //const randomGradient1 = randomGradients.staticGradient();
   const randomGradient1 = "from-rose-100 via-slate-300 to-teal-100";
   //const randomGradient2 = helpers.staticGradient();
-  <Footer />
+  
   return (
     <>
       <div className={"font-sans bg-gradient-to-br " + randomGradient1} >
@@ -33,6 +33,7 @@ export default function Home({ data}) {
         </div>
         
         </Provider>
+        <Footer />
       </div>
     </>
   );
