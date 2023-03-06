@@ -1,10 +1,11 @@
 .diagonal {
   --skew-angle: -5deg;
-  --background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+  --background: linear-gradient(45deg, var(--c1, #12c2e9), var(--c2, #c471ed) 51%, var(--c1, #f64f59)) var(--x, 0)/ 100%;
   position: relative;
   isolation: isolate;
   padding: 10px;
   padding-top: 30px;
+  border-radius: 30px;
 }
 
 .diagonal::after {
@@ -15,6 +16,24 @@
   inset: 0;
   transform: skewY(var(--skew-angle));
   border-radius: 30px;
+  transition: 5s;
+}
+
+.diagonal:hover {
+  /*--x: 100%;*/
+  /*animation: gradient 5s ease infinite;*/
+}
+
+@keyframes gradient {
+	0% {
+    --x: 0%;
+	}
+	50% {
+    --x: 100%;
+	}
+	100% {
+    --x: 0%;
+	}
 }
 
 .diagonal2 {

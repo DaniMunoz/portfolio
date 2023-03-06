@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { showProjectsActions } from '../../src/store/showProjects-slice';
+import { showContactActions } from '../../src/store/showContact-slice';
 import Link from "next/link";
 //import Image from "next/image";
 import LanguageSelector from "../languageSelector/languageSelector";
@@ -13,10 +14,16 @@ export default function Header() {
 
   const handleShowProjects = (event) => {
     dispatch(showProjectsActions.changeShowProjectsTo(true));
+    dispatch(showContactActions.changeShowContactTo(false));
   };
 
   const handleHideProjects = (event) => {
     dispatch(showProjectsActions.changeShowProjectsTo(false));
+    dispatch(showContactActions.changeShowContactTo(false));
+  };
+
+  const handleShowContact =  (event) => {
+    dispatch(showContactActions.changeShowContactTo(true));
   };
 
   let enlace = "/"
@@ -33,7 +40,7 @@ export default function Header() {
       <nav className="md:text-2xl basis-3/4">
         <div className="flex flex-row-reverse">
           <LanguageSelector />&nbsp;&nbsp;&nbsp;
-          <Link href="/" className="font-normal bg-amber-400 hover:bg-amber-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline">
+          <Link href="/" className="font-normal bg-amber-400 hover:bg-amber-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleShowContact}>
             {languageStrings["header.contact"]}</Link>&nbsp;&nbsp;&nbsp;
           <Link href={enlace} className="font-normal bg-teal-400 hover:bg-teal-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleHideProjects}>
             {languageStrings["header.qualifications"]}</Link>&nbsp;&nbsp;&nbsp;
