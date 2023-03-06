@@ -3,11 +3,13 @@ import { screen } from '@testing-library/react';
 import Footer from './Footer';
 
 describe('Footer', () => {
-  it('renders the correct text in the footer', () => {
+  
+  it('renders the waves in the footer', () => {
     //const { getByText } = render(<Header />);
     render(<Footer />);
-    expect(screen.getByText('Footer')).toBeInTheDocument();
+    expect(screen.getAllByTestId('wave')).toHaveLength(4);
   });
+  
 
   /*
   it('navigates to the correct page when a link is clicked', () => {
