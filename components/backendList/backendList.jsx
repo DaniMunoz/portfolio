@@ -8,9 +8,7 @@ const backends = [
   { id: 1, name: 'MongoDB', unavailable: false },
   { id: 2, name: 'AWS Lambda + DynamoDB', unavailable: false },
   { id: 3, name: 'Google Firebase', unavailable: false },
-  { id: 4, name: 'Supabase + Prisma + PostgreSQL', unavailable: false },
-  { id: 5, name: 'Google Cloud: Java + Datastore', unavailable: true },
-  { id: 6, name: 'Prisma + MySQL', unavailable: true },
+  { id: 4, name: 'Supabase + Prisma + PostgreSQL', unavailable: false }
 ]
 
 function BackendList() {

@@ -36,7 +36,7 @@ export default function SideBar() {
           <Image src="/images/daniel.png" alt="Daniel" width={200} height={200} className="rounded-full mx-auto" priority={true}/>
           <h1 role="name" className="text-lg transition-all duration-500">Daniel Muñoz Gil</h1>
           <h2 role="title" className="font-mono font-semibold text-lg transition-all duration-500">Full Stack Developer</h2>
-          <Image role="toque" src="/images/3w.png" alt="image" width={284} height={27} className="mx-auto animate-bounce mt-3 w-[284px] transition-all duration-500"/>
+          <Image role="toque" src="/images/3w.png" alt="image" width={284} height={27} className="mx-auto animate-bounce my-3 w-[284px] transition-all duration-500"/>
         </section>
       }
       {!showContact && 
@@ -44,7 +44,7 @@ export default function SideBar() {
           <Image src="/images/daniel.png" alt="Daniel" width={200} height={200} className="rounded-full mx-auto" priority={true}/>
           <h1 role="name" className="text-2xl transition-all duration-500 group-hover:text-lg">Daniel Muñoz Gil</h1>
           <h2 role="title" className="font-mono font-semibold text-xl transition-all duration-500 group-hover:text-lg">Full Stack Developer</h2>
-          <Image role="toque" src="/images/3w.png" alt="image" width={284} height={27} className="mx-auto group-hover:animate-bounce mt-3 w-[225px] transition-all duration-500 group-hover:w-[284px]"/>
+          <Image role="toque" src="/images/3w.png" alt="image" width={284} height={27} className="mx-auto group-hover:animate-bounce my-3 w-[225px] transition-all duration-500 group-hover:w-[284px]"/>
         </section>
       }
       <section className={styles.diagonal2}>
