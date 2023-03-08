@@ -23,7 +23,7 @@ function BackendList() {
   return (
     <div className="w-52 mx-auto">
         
-      <Listbox value={backendRedux} onChange={handleBackendChange} name="backend">
+      <Listbox role="DatasourceSelector" value={backendRedux} onChange={handleBackendChange} name="backend">
         <div className="relative mt-1">
         
           <Listbox.Button role="backendSelectorButton" className="relative w-full cursor-default rounded-lg bg-white text-black py-2 pl-3 pr-10 text-center shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">

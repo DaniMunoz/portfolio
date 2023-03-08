@@ -38,7 +38,7 @@ export default function Header() {
         {/*<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />*/}
       </Link>
       <nav className="md:text-2xl basis-3/4">
-        <div className="flex flex-row-reverse">
+        <div className="flex flex-row-reverse ">
           <LanguageSelector />&nbsp;&nbsp;&nbsp;
           <Link href="/" className="font-normal bg-amber-400 hover:bg-amber-500 text-white py-1 px-2 rounded-lg border-0 hover:rounded no-underline" onClick={handleShowContact}>
             {languageStrings["header.contact"]}</Link>&nbsp;&nbsp;&nbsp;
