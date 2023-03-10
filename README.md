@@ -8,14 +8,17 @@ I am willing to add more to the list :)
 
 ## About this project
 
-For now, it uses:
+It uses:
 
 - [React](https://reactjs.org/), [NextJS](https://nextjs.org/)
 - Test Driven Development: [React Testing library](https://testing-library.com/), [Jest](https://jestjs.io/), [Cypress](https://www.cypress.io/)
 - [Tailwindcss](https://tailwindcss.com/)
 
-The data and images, at this moment, are local
+Data (projects, titles, certifications...) is obtained from different data sources, at user's choice:
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
+- NextJS Local JSON files
+- MongoDB
+- AWS Lambda + NodeJS + DynamoDB
+- Google Firebase
+- Supabase + Prisma + PostgreSQL
+
