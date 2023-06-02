@@ -62,6 +62,18 @@
   {
     "id": 6,
     "type": "certification",
+    "image": "/images/psm.png",
+    "link": "https://www.credly.com/badges/14d7efa1-509d-41f8-92af-fadc956637be/public_url",
+    "institution_en": "Scrum.org",
+    "institution_es": "Scrum.org",
+    "title_en": "Professional Scrum Master I",
+    "title_es": "Professional Scrum Master I",
+    "text_en": "",
+    "text_es": ""
+  },
+  {
+    "id": 7,
+    "type": "certification",
     "image": "/images/microsoft-128.png",
     "link": "https://learn.microsoft.com/en-us/users/danielmuoz-9291/transcript/dzq6pso80n9pm2z",
     "institution_en": "Microsoft",
@@ -72,7 +84,7 @@
     "text_es": ""
   },
   {
-    "id": 7,
+    "id": 8,
     "type": "certification",
     "image": "/images/microsoft-128.png",
     "link": "https://learn.microsoft.com/en-us/users/danielmuoz-9291/transcript/dzq6pso80n9pm2z",
@@ -84,7 +96,7 @@
     "text_es": ""
   },
   {
-    "id": 8,
+    "id": 9,
     "type": "certification",
     "image": "/images/mongodb-128.png",
     "link": "https://learn.mongodb.com/c/cuXBsBhFTo-CJoqI-At-hQ",
