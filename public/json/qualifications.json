@@ -50,18 +50,6 @@
   {
     "id": 5,
     "type": "certification",
-    "image": "/images/google-cloud-128.png",
-    "link": "https://www.coursera.org/account/accomplishments/specialization/CS7DX6HYLX9X",
-    "institution_en": "Google Cloud Platform",
-    "institution_es": "Google Cloud Platform",
-    "title_en": "Data Engineering, Big Data & Machine Learning on GCP",
-    "title_es": "Data Engineering, Big Data & Machine Learning on GCP",
-    "text_en": "<span>Google Specialization, consisting of 5 courses:</span><span><ul><li><a href='https://www.coursera.org/account/accomplishments/certificate/UXXX2TQ88698'>Building Resilient Streaming Systems on Google Cloud Platform</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/4AZYJPR35Z6G'>Google Cloud Big Data and Machine Learning Fundamentals</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/XF6Z2JE7HY7P'>Serverless Data Analysis with Google BigQuery and Cloud Dataflow</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/CNNQXPKBLHEW'>Serverless Machine Learning with Tensorflow on Google Cloud Platform</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/RTXYB25FCNX5'>Leveraging Unstructured Data with Cloud Dataproc on Google Cloud Platform</a></li></ul></span>",
-    "text_es": "<span>Especialización de Google, consistente en 5 cursos:</span><span><ul><li><a href='https://www.coursera.org/account/accomplishments/certificate/UXXX2TQ88698'>Building Resilient Streaming Systems on Google Cloud Platform</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/4AZYJPR35Z6G'>Google Cloud Big Data and Machine Learning Fundamentals</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/XF6Z2JE7HY7P'>Serverless Data Analysis with Google BigQuery and Cloud Dataflow</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/CNNQXPKBLHEW'>Serverless Machine Learning with Tensorflow on Google Cloud Platform</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/RTXYB25FCNX5'>Leveraging Unstructured Data with Cloud Dataproc on Google Cloud Platform</a></li></ul></span>"
-  },
-  {
-    "id": 6,
-    "type": "certification",
     "image": "/images/psm.png",
     "link": "https://www.credly.com/badges/14d7efa1-509d-41f8-92af-fadc956637be/public_url",
     "institution_en": "Scrum.org",
@@ -72,7 +60,43 @@
     "text_es": ""
   },
   {
+    "id": 6,
+    "type": "certification",
+    "image": "/images/atlassian-128.png",
+    "link": "https://www.certmetrics.com/atlassian/public/transcript.aspx?transcript=5CRZ1Y12C2EE1M3N",
+    "institution_en": "Atlassian",
+    "institution_es": "Atlassian",
+    "title_en": "Managing Jira Projects for Cloud",
+    "title_es": "Managing Jira Projects for Cloud",
+    "text_en": "",
+    "text_es": ""
+  },
+  {
     "id": 7,
+    "type": "certification",
+    "image": "/images/kanban-128.png",
+    "link": "https://edu.kanban.university/user/113232/19882/149/certificate",
+    "institution_en": "Kanban University",
+    "institution_es": "Kanban University",
+    "title_en": "TKP - Team Kanban Practitioner",
+    "title_es": "TKP - Team Kanban Practitioner",
+    "text_en": "",
+    "text_es": ""
+  },
+  {
+    "id": 8,
+    "type": "certification",
+    "image": "/images/google-cloud-128.png",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/CS7DX6HYLX9X",
+    "institution_en": "Google Cloud Platform",
+    "institution_es": "Google Cloud Platform",
+    "title_en": "Data Engineering, Big Data & Machine Learning on GCP",
+    "title_es": "Data Engineering, Big Data & Machine Learning on GCP",
+    "text_en": "<span>Google Specialization, consisting of 5 courses:</span><span><ul><li><a href='https://www.coursera.org/account/accomplishments/certificate/UXXX2TQ88698'>Building Resilient Streaming Systems on Google Cloud Platform</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/4AZYJPR35Z6G'>Google Cloud Big Data and Machine Learning Fundamentals</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/XF6Z2JE7HY7P'>Serverless Data Analysis with Google BigQuery and Cloud Dataflow</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/CNNQXPKBLHEW'>Serverless Machine Learning with Tensorflow on Google Cloud Platform</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/RTXYB25FCNX5'>Leveraging Unstructured Data with Cloud Dataproc on Google Cloud Platform</a></li></ul></span>",
+    "text_es": "<span>Especialización de Google, consistente en 5 cursos:</span><span><ul><li><a href='https://www.coursera.org/account/accomplishments/certificate/UXXX2TQ88698'>Building Resilient Streaming Systems on Google Cloud Platform</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/4AZYJPR35Z6G'>Google Cloud Big Data and Machine Learning Fundamentals</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/XF6Z2JE7HY7P'>Serverless Data Analysis with Google BigQuery and Cloud Dataflow</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/CNNQXPKBLHEW'>Serverless Machine Learning with Tensorflow on Google Cloud Platform</a></li><li><a href='https://www.coursera.org/account/accomplishments/certificate/RTXYB25FCNX5'>Leveraging Unstructured Data with Cloud Dataproc on Google Cloud Platform</a></li></ul></span>"
+  },
+  {
+    "id": 9,
     "type": "certification",
     "image": "/images/microsoft-128.png",
     "link": "https://learn.microsoft.com/en-us/users/danielmuoz-9291/transcript/dzq6pso80n9pm2z",
@@ -84,7 +108,7 @@
     "text_es": ""
   },
   {
-    "id": 8,
+    "id": 10,
     "type": "certification",
     "image": "/images/microsoft-128.png",
     "link": "https://learn.microsoft.com/en-us/users/danielmuoz-9291/transcript/dzq6pso80n9pm2z",
@@ -96,7 +120,7 @@
     "text_es": ""
   },
   {
-    "id": 9,
+    "id": 11,
     "type": "certification",
     "image": "/images/mongodb-128.png",
     "link": "https://learn.mongodb.com/c/cuXBsBhFTo-CJoqI-At-hQ",
